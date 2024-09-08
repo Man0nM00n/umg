@@ -18,11 +18,11 @@ export class HomeComponent {
   slides:any[]=[
     {
       name:"slide1",
-      src:"slides/slide1.jpg"
+      src:"slide1.jpg"
     },
     {
       name:"slide2",
-      src:"slides/slide2.jpg"
+      src:"slide2.jpg"
     },
   ]; 
 

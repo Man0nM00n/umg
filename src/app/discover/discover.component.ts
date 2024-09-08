@@ -30,7 +30,7 @@ export class DiscoverComponent {
         {
           class: "right-block ",
           text:false,
-          imageSrc: "services/exploration/explo2.webp",
+          imageSrc: "explo2.webp",
           imageClass:"block-img",
           phrase: "Unlocking the Potential of Your Mining Project"
           
@@ -44,7 +44,7 @@ export class DiscoverComponent {
         {
           class: "left-block",
           text:false,
-          imageSrc: "services/construction/construction.jpg",
+          imageSrc: "construction.jpg",
           imageClass:"block-img",
           phrase: "Building a Strong Foundation"
         },
@@ -88,7 +88,7 @@ export class DiscoverComponent {
         {
           class: "right-block ",
           text:false,
-          imageSrc: "services/production/production.avif",
+          imageSrc: "production.avif",
           imageClass:"block-img",
           phrase:"Maximizing Your Mining Project's Potential"
           
@@ -102,7 +102,7 @@ export class DiscoverComponent {
         {
           class: "left-block",
           text:false,
-          imageSrc: "services/development/development.jpg",
+          imageSrc: "development.jpg",
           imageClass:"block-img",
           phrase:""
         },

@@ -9,19 +9,19 @@ export class ContactComponent {
 partners:any[]=[
   {
     name: "TOTAL",
-    imageSrc: "partners/total.png",
+    imageSrc: "total.png",
   },
   {
     name: "EPIROC",
-    imageSrc: "partners/epiroc.png",
+    imageSrc: "epiroc.png",
   },
   {
     name: "ENDEAVOUR",
-    imageSrc: "partners/Endeavour.png",
+    imageSrc: "Endeavour.png",
   },
   {
     name: "NEC SYSTEMS",
-    imageSrc: "partners/BE.png",
+    imageSrc: "BE.png",
   }
 ];
 }
