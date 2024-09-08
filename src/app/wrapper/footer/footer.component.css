@@ -1,0 +1,51 @@
+.footer-container{
+    height: auto;
+    margin-top: -36px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #85b2f9;
+    
+}
+.footer-content {
+    margin: 0 auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto [footer-logo] auto 8vw [quick-links] auto 2vw [newsletter] auto 2vw [contact] auto 2vw [map] auto 4vw;
+}
+.footer-logo{
+    margin-top: 6vh;
+    margin-left: auto;
+
+    .flogo{
+        width: 250px;
+    }
+}
+.links{
+    grid-column: quick-links;
+    align-items: center;
+    align-content: center;
+    ul {
+        list-style: none;
+        display: inherit;
+        justify-content: space-between;
+        padding: 10px;
+
+        li{
+            grid-column: element;
+            margin-top: 1vh;
+            margin-bottom: 0.5vh;
+        }
+    }
+}
+.news{
+    grid-column: newsletter;
+}
+.contacts{
+    grid-column: contact;
+}
+.map{
+    grid-column: map;
+}

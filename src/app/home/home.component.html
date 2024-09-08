@@ -1,0 +1,111 @@
+<div class="home-title">
+    <br>
+    <br>
+    <br>
+    <span class="title">Home</span>
+
+</div>
+<div class="page-wrapper">
+
+    
+    <div class="page-content">
+        <div class="slides">
+            <p-carousel 
+            [value]="slides" 
+            [numVisible]="1" 
+            [numScroll]="1" 
+            [circular]="true" 
+            autoplayInterval="3000" >
+    
+            <ng-template class="test" let-slide pTemplate="item">
+                <img class="slide-img" src={{slide.src}} alt={{slide.name}}>
+            </ng-template>
+    
+            </p-carousel>
+    
+        </div>
+        <section class="hero">
+            <div class="hero-text">
+              <a class="phrase ">Welcome to UNIFIED MINING GROUP</a>
+              <p class="paragraph1">
+                At our company, we specialize in providing top-quality mining solutions and services to clients worldwide. With years of experience in the industry, we have developed a deep understanding of the challenges faced by miners and have designed our offerings to meet those needs.</p>
+              <p class="paragraph2">Our team of experts is dedicated to delivering exceptional results, whether it's optimizing your operations, improving safety standards, or maximizing profitability. We use state-of-the-art technology and equipment, ensuring that we stay ahead of the curve and provide the most efficient solutions available.</p>
+              <div class="hero-buttons">
+                <p-button class="primary" label="Learn More >" />
+              </div>
+            </div>
+
+            <div class="hero-img-wrapper">
+                <img class="hero-img" src="hero.png" alt="">
+            </div>
+        </section>
+
+        <div class="services-wrapper">
+            <section class="services">
+            
+                <ng-template ngFor let-item [ngForOf]="services" let-i="index" class="services-wrapper">
+    <!--                 <p-card class="service-card">
+                        <img src={{item.imageSrc}} alt="" class="service-img">
+                        <ng-template pTemplate="footer">
+                            <div class="service-name">
+                                <span>{{item.name}}</span>
+                            </div>
+                        </ng-template>
+                    </p-card> -->
+                    <div class="service-card">
+                        <img src={{item.imageSrc}} alt="" class="service-img">
+                        <div class="service-name">
+                            <h2 class="name">{{item.name}}</h2>
+                        </div>
+                    </div>
+                </ng-template>
+                
+            </section>
+
+            <div class="service-button">
+                <p-button class="primary" label="More About US >" />
+            </div>
+        </div>
+
+        <div class="add-wrapper">
+            <ng-template ngFor let-item [ngForOf]="addings" class="adding"> 
+                <div class={{item.class}}>
+                    <ng-template ngFor let-block [ngForOf]="item.blocks" class="adding-block">
+                        <div class={{block.class}}  *ngIf="block.text; else elseBlock" >
+                            <h2 class="block-title">{{block.title}}</h2>
+                            <div class="block-text-wrapper">
+                                <ng-template ngFor let-p [ngForOf]="block.paragraphs">
+                                    <p class="p-text">{{p.text}}</p>
+                                </ng-template>
+                            </div>
+                        </div>
+                        <ng-template #elseBlock>
+                            <div class={{block.class}}>
+                                <img class={{block.imageClass}} src={{block.imageSrc}} alt="">
+                            </div>
+                            
+                        </ng-template>
+                    </ng-template>
+
+                </div>
+            </ng-template>
+<!--             <div class="full-width two-blocks">
+                <div class="left-block text-block">
+                    <h2 class="block-title">A process made for better results</h2>
+                    <div class="block-text-wrapper">
+                       <p class="p-text">In the feasibility and pre-production stages, our technical experts combine metallurgical expertise with our experience in plant design and engineering to deliver on-time, proven and cost effective solutions for small-scale plant upgrades, retrofits, greenfield and brownfield projects.</p>
+                       <p class="p-text">Our inspection and sampling services support both buyers and sellers of high value cargos.  We carry out cargo and carrying vessel inspection, stockpile monitoring equipment testing and commercial analysis.</p>
+                       <p class="p-text">In addition to providing a full range of standard analysis and testing services, we can supply state-of-the-art mobile laboratories and even install and staff on-site laboratories to give you your own customized testing facilities – anywhere in the world.</p>
+                    </div>
+                </div>
+                <div class="right-block">
+                    <img class="block-img" src="hero.png" alt="">
+
+                </div>
+            </div> -->
+        </div>
+
+    </div>
+
+
+</div>

@@ -1,0 +1,197 @@
+.slide-img{
+   width: 100%; 
+   height: auto;
+}
+:host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button{
+    background-color: #eab308;
+}
+.hero{
+    display: flex;
+    /* grid-template-columns: 
+    [full-with-start]10px 10px [breackout-start] 100px [content-start] 1fr [content-end] 100px [breackout-end] 10px 10px [full-with-end];   */
+}
+.hero-text{
+    width: 50%;
+    display: grid;
+/*     grid-template-rows: 2vh [phrase] 1vh 1vh 1vh [paragraph]  1vh  [adding] 1vh [buttons] 2vh ; */
+/*     grid-template-rows: 2vh 6vh 2vh [phrase] 6vh 2vh 2vh [paragraph] 4vh 4vh 2vh 2vh [adding]  2vh 4vh 4vh 4vh 2vh [buttons] 2vh; */
+    grid-template-rows: [phrase] auto [paragraph] auto [adding] auto [buttons] auto 4vh;
+}
+.hero-img-wrapper{
+    width: 50%;
+    clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%);
+}
+.hero-img{
+    width: 100%;
+    height: 100%; 
+    border-left: 2px solid #eab308;
+}
+.hero-section > * {
+    display: block;
+}
+.hero > :not(.full-width, .breackout){
+    grid-column: content;
+}
+  
+.hero > .breackout {
+    grid-column: breackout;
+}
+  
+.hero > .full-width {
+    grid-column: full-width;
+}
+.phrase{
+    grid-row: phrase;
+    margin-left: 4vh;
+    margin-right: auto;
+    font-size: 4rem;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1;
+}
+.paragraph1{
+    grid-row: paragraph;
+    margin-left: 2vw;
+}
+.paragraph2{
+    grid-row: adding;
+    margin-left: 2vw;
+}
+.hero-buttons{
+    grid-row: buttons;
+    margin-right: auto;
+    margin-left: auto;
+}
+:host ::ng-deep .p-button{
+    background: #eab308;
+    border: 4px solid #0229ac;
+    padding: 15px;    
+}
+.services-header{
+    margin-left: auto;
+    margin-right: auto;
+}
+.services-wrapper{
+    display: grid;
+    grid-template-rows: auto;
+    margin-top: 4vh;
+}
+.services{
+    display: flex;
+    width: 100%;
+    .service-card{
+        width: 20vw;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid #0229ac;
+    }
+    /* .services-header{
+        
+    } */
+    .service-img{
+        height: 45vh;
+        width: 100%;
+    }
+    .service-name{
+        height: 10vh;
+        align-content: center;
+        grid-template-columns: auto [content] auto;
+        display: grid;
+        .name{
+            grid-column: content;
+        }
+    }      
+}
+.service-button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+/* :host ::ng-deep .p-card .p-component{
+} */
+.test{
+    background: #0229ac;
+}
+:host ::ng-deep .p-carousel-content{
+    background-color: #001559;
+}
+/* .add-wrapper{
+    display: grid;
+    grid-template-columns: 
+    [full-with-start] 2vw 10px [breackout-start] 100px [content-start] 1fr [content-end] 100px [breackout-end] 10px 2vw [full-with-end]; 
+    width: 100%;
+}
+.add-wrapper > :not(.full-width, .breackout){
+    grid-column: content;
+}
+.add-wrapper > .full-width{
+    grid-column: fullwidth;
+}
+.add-wrapper > .breackout{
+    grid-column: breackout;
+} */
+.two-blocks{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.left-block{
+    width: 100%;
+    background-color: #eab308;
+}
+.left-block.text-block{
+    display: grid;
+    grid-template-rows: [title] auto  [paragraph];
+    .block-title{
+        grid-row: title;
+        font-style: oblique;
+        align-self: center;
+        text-align: center;
+    }
+    .block-text-wrapper{
+        grid-row: paragraph;
+        display: grid;
+        grid-template-columns:   
+        [full-width-start] auto 50px [breackout-start] auto 50px [content-start] 1fr [content-end] 50px auto [breackout-end] 50px auto [full-width-end];
+    }
+    .p-text{
+        grid-column: breackout;
+        display: block;
+        overflow: auto;
+        margin-left: auto;
+        font-size: larger;
+        line-height: 2rem;
+    }
+}
+.right-block.text-block{
+    display: grid;
+    grid-template-rows: [title] auto  [paragraph];
+    .block-title{
+        grid-row: title;
+        font-style: oblique;
+        align-self: center;
+        text-align: center;
+    }
+    .block-text-wrapper{
+        grid-row: paragraph;
+        display: grid;
+        grid-template-columns:   
+        [full-width-start] auto 50px [breackout-start] auto 50px [content-start] 1fr [content-end] 50px auto [breackout-end] 50px auto [full-width-end];
+    }
+    .p-text{
+        grid-column: breackout;
+        display: block;
+        overflow: auto;
+        margin-right: auto;
+        font-size: larger;
+        line-height: 2rem;
+    }
+}
+.right-block{
+    background-color: #0229ac;
+    width: 100%;
+}
+
+.block-img{
+    width: 100%;
+}

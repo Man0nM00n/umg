@@ -1,0 +1,38 @@
+<div class="navbar">
+    <p-toolbar 
+    class="logo-bar"
+        styleClass="bg-gray-900" 
+        [style]="{  }">
+        <ng-template pTemplate="start">
+            <img class="logo" src="logo.svg"/>
+        </ng-template>
+        <ng-template pTemplate="center">
+            <div class="align-items-center gap-3 contacts" >
+                <ng-template ngFor let-item [ngForOf]="contacts" let-i="index" class="contact-wrapper">
+                    <span class="contact full-span">             
+                        <i class={{item.icon}}></i>
+                        <span class=" content contact-type">{{item.name}}</span>
+                        <span class="content contact-value">{{item.value}}</span>
+                    </span>
+                </ng-template>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="end">
+            <div class="flex align-items-center gap-2">
+              
+            </div>
+        </ng-template>
+    </p-toolbar>
+
+    <div class="menu-wrapper">
+        <div class="left-fill">
+            
+        </div>
+        <div class="card menus">
+            <p-menubar 
+                [model]="menus" />            
+        </div>
+    </div>
+
+
+</div>

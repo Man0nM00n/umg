@@ -1,0 +1,39 @@
+<div class="footer-container">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img class="flogo" src="logo.svg" alt="Footer Logo"  />
+        </div>
+        <div class="links">
+            <h3 class="text-xl font-semibold">Quick Links</h3>
+            <ul class="mt-2" >
+              <li *ngFor="let link of menus">
+                <a href="#" class="nav-link">{{link.label}}</a>
+              </li>
+            </ul>
+        </div>
+        <div class="news">
+            <h3 class="text-xl font-semibold">Newsletter</h3>
+            <p class="mt-2">Send us your email to receive our newsletter</p>
+            <div class="flex mt-2">
+              <input type="email" placeholder="Your Email" class="" />
+              <button class="">Submit</button>
+            </div>
+        </div>
+        <div class="contacts">
+            <h3 class="text-xl font-semibold">Contact us</h3>
+            <div class="mt-2">
+              <p>Ouagadougou, Burkina Faso</p>
+              <p>info</p>
+              <p>+226 25 36 54</p>
+            </div>
+        </div>
+
+        <div class="map">
+
+        </div>
+
+    </div>
+</div>
+
+
+

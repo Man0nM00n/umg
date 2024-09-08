@@ -1,0 +1,43 @@
+<div class="page-title">
+    <br>
+    <br>
+    <br>
+    <br>
+    <span class="title">About Us</span>
+</div>
+<div class="page-wrapper">
+
+    
+    <div class="page-content">
+        <span class="centered"><h1 class="services">Our Company</h1></span>
+        <br>
+        <p class="centered about-intro">Hello, and welcome to our presentation on Unified Mining Group (UMG), a leading mining entrepreneurship that provides a range of services to help unlock the full potential of your mining project. With years of experience in the industry, UMG is dedicated to delivering exceptional results that meet your needs and expectations.</p>
+        <p class="centered about-intro">UMG offers top-notch production services designed to help unlock the full potential of your mining project. With our expertise, efficiency, and commitment to sustainability, we are confident in delivering exceptional results that meet your needs and expectations. Thank you for considering UMG for your mining requirements.</p>
+        <br>
+        <span class="centered"><h1 class="services">Our Services</h1></span>
+        <ng-template ngFor let-item [ngForOf]="addings" class="adding"> 
+            <div class={{item.class}}>
+                <ng-template ngFor let-block [ngForOf]="item.blocks" class="adding-block">
+                    <div class={{block.class}}  *ngIf="block.text; else elseBlock" >
+                        <h2 class="services block-title">{{block.title}}</h2>
+                        <div class="block-text-wrapper">
+                            <ng-template ngFor let-p [ngForOf]="block.paragraphs">
+                                <p class="p-text">{{p.text}}</p>
+                            </ng-template>
+                        </div>
+                    </div>
+                    <ng-template #elseBlock>
+                        <div class={{block.class}}>
+                            <img class={{block.imageClass}} src={{block.imageSrc}} alt="">
+                            <span class="catch-phrase">{{block.phrase}}</span>
+                        </div>
+                    </ng-template>
+                </ng-template>
+
+            </div>
+            <br>
+        </ng-template>
+    </div>
+
+
+</div>

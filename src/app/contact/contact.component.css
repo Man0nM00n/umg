@@ -1,0 +1,36 @@
+.partners-wrapper{
+    display: grid;
+    grid-template-rows: auto;
+    margin-top: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+.partners{
+    display: flex;
+    width: 100%;
+    .carret{
+        height: auto;
+        border: 2px solid white;
+        background-color: #001559;
+        margin-left: auto;
+        margin-right: auto;;
+        transform:skewX(25deg);
+    };
+    .carret > .partner-card{
+        width: 18vw;
+        height: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+        transform:skewX(-25deg);
+        border: 2px solid #eab308;
+        background-color: #eab308;
+    };
+    .partner-img{
+        margin-top: 4vh;
+        height: 25vh;
+        background-color: white;
+        width: 100%;
+    }
+}
