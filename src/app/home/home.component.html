@@ -1,11 +1,11 @@
-<div class="home-title">
+<!-- <div class="home-title">
     <br>
     <br>
     <br>
     <span class="title">Home</span>
 
-</div>
-<div class="page-wrapper">
+</div> -->
+<!-- <div class="page-wrapper"> -->
 
     
     <div class="page-content">
@@ -22,9 +22,44 @@
             </ng-template>
     
             </p-carousel>
-    
+            <span class="catch-phrase">
+                <h2>Unlocking the <br>maximum of <br>your project <br>potential !</h2>
+            </span>
+
+            <span class="gold">
+                <img src="gold.png" alt="" class="gold-img">
+            </span>
+            <section class="top-viewed">
+                <ng-template ngFor let-item [ngForOf]="cards" let-i="index" >
+                        <div class="top-card">
+                            <a href={{item.url}} class="tcard">
+                                <h2 class="card-title">{{item.name}}</h2>
+                                <h2 class="card-subtext">{{item.description}}</h2>
+                            </a>
+                        </div>
+                    
+                </ng-template>
+            </section>
         </div>
-        <section class="hero">
+        <section class="fleet-location">
+            <div class="fleet-text">
+                <h2 class="fleet-title">We offer some machinery for mining projects !</h2>
+                <h4 class="quote">You need any support for surface mining operations ? <br> Any need in mining equipments ? 
+                    We can provide what you need. <br> <br> UMG is lending a part of its mining fleet, with or without experts to support you. <br> 
+                    Just contact-us and get access to the best pieces of equipments <br>you can possibly find for all your surface mining projects, <br>
+                    to rent out our machines and get great support with our experts !
+                </h4>
+                <div class="service-button">
+                    <p-button class="primary" label="Ask for a quote" />
+                </div>
+            </div>
+            <div class="fleet-carousel">
+                <app-fleet></app-fleet>
+            </div>
+        </section>
+        <br>
+
+        <!-- <section class="hero">
             <div class="hero-text">
               <a class="phrase ">Welcome to UNIFIED MINING GROUP</a>
               <p class="paragraph1">
@@ -38,32 +73,26 @@
             <div class="hero-img-wrapper">
                 <img class="hero-img" src="hero.png" alt="">
             </div>
-        </section>
+        </section> -->
 
         <div class="services-wrapper">
             <section class="services">
             
-                <ng-template ngFor let-item [ngForOf]="services" let-i="index" class="services-wrapper">
-    <!--                 <p-card class="service-card">
-                        <img src={{item.imageSrc}} alt="" class="service-img">
-                        <ng-template pTemplate="footer">
+                <ng-template  ngFor let-item [ngForOf]="services" let-i="index" class="services-wrapper">
+                    <section (click)="navigateTo(item.url)" class="wrapper">
+                        <div class="service-card">
+                            <img src={{item.imageSrc}} alt="" class="service-img">
                             <div class="service-name">
-                                <span>{{item.name}}</span>
+                                <h2 class="sname">{{item.name}}</h2>
                             </div>
-                        </ng-template>
-                    </p-card> -->
-                    <div class="service-card">
-                        <img src={{item.imageSrc}} alt="" class="service-img">
-                        <div class="service-name">
-                            <h2 class="name">{{item.name}}</h2>
                         </div>
-                    </div>
+                    </section>
                 </ng-template>
                 
             </section>
 
             <div class="service-button">
-                <p-button class="primary" label="More About US >" />
+                <p-button class="primary" label="Our Services >" />
             </div>
         </div>
 
@@ -108,4 +137,4 @@
     </div>
 
 
-</div>
+<!-- </div> -->

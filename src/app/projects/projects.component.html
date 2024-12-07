@@ -1,0 +1,32 @@
+<div class="content">
+    <div class="anker-wrapper">
+        <img src="show.jpg" alt="" class="anker"> 
+    </div>
+
+    <div class="wrapper">
+
+        <div class="page-content">
+            <div class="breackout about-wrapper">
+                <ng-template ngFor let-item [ngForOf]="contents" class="nav">
+                    <div class="full-width content-header">
+                        <h2 class="page-title">{{item.name | uppercase}}</h2>
+                        <br>
+                        <h1 class="company-slogan">{{item.slogan}}</h1>
+                    </div>
+                    <div class="breackout content-main">
+                        <ng-template ngFor let-p [ngForOf]="item.content.paragraphs">
+                            <p *ngIf="p.class!='quote paragraph'" class={{p.class}}>{{p.text}}</p>
+                            <blockquote *ngIf="p.class=='quote paragraph'" class="quote-wrapper">
+                                <p class={{p.class}}>{{p.text}}</p>
+                            </blockquote>
+                        </ng-template>
+                    </div>
+
+                </ng-template>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

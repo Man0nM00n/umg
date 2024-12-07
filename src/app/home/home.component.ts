@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 export interface block{
   class:string;
@@ -15,6 +16,10 @@ export interface block{
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  constructor(
+    private _router:Router
+  ){}
+
   slides:any[]=[
     {
       name:"slide1",
@@ -38,26 +43,40 @@ export class HomeComponent {
       numScroll: 1
   },
   ];
+
+  cards:any[]=[
+    {
+      name: "OUR SERVICES OFFERRING",
+      url: "/services/presentation",
+      description: "DRILL & BLAST, GRADE CONTROL ...",
+    },
+    {
+      name: "OUR COMPANY",
+      url: "/about/company",
+      description: "An incredibly efficient hand in work!",
+    },
+    {
+      name: "OUR LOCATIONS",
+      url: "/projects/current",
+      description: "Efficient work gives big results !",
+    }
+  ];
+
   services:any[]=[
     {
-      name: "EXPLORATION",
-      url: "",
-      imageSrc: "explo.jpg",
+      name: "DRILL & BLAST",
+      url: "/services/drill",
+      imageSrc: "drill.jpg",
     },
     {
-      name: "CONSTRUCTION",
-      url: "",
-      imageSrc: "constructor.jpg",
+      name: "GRADE CONTROL",
+      url: "/services/grade",
+      imageSrc: "grader.png",
     },
     {
-      name: "PRODUCTION",
-      url: "",
-      imageSrc: "product.jpg",
-    },
-    {
-      name: "DEVELOPMENT",
-      url: "",
-      imageSrc: "production.jpg",
+      name: "FLEET LOCATION",
+      url: "/services/rental",
+      imageSrc: "locate.jpg",
     }
   ];
 
@@ -85,7 +104,7 @@ export class HomeComponent {
         {
           class: "right-block ",
           text:false,
-          imageSrc: "hero.png",
+          imageSrc: "show.jpg",
           imageClass:"block-img",
           
         }
@@ -98,7 +117,7 @@ export class HomeComponent {
         {
           class: "left-block",
           text:false,
-          imageSrc: "hero.png",
+          imageSrc: "shows.jpg",
           imageClass:"block-img",
         },
         {
@@ -124,7 +143,11 @@ export class HomeComponent {
 
   ];
 
-  
+  navigateTo(page:string){
+    console.log(page);
+    
+    this._router.navigate([page]);
+  }
 
 
 }

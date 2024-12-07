@@ -1,3 +1,187 @@
+.content{
+    display: grid;
+    width: 100%;
+}
+.anker-wrapper{
+    width: 100%;
+    height: 75vh;
+}
+.anker{
+    width: 100%;
+    height: 100%;
+}
+.wrapper{
+    display: grid;
+    margin-top: -20vh;
+    width: 100%;
+    min-height: max-content;
+    grid-template-columns: 0.7fr 3fr 0.2fr;
+}
+.page-nav{
+    width: 100%;
+    /* background-color: azure; */
+    min-height: 30vh;
+    max-height: 40vh;
+    margin-top: 20vh;
+    align-items: center;
+    .nav-ul{
+        display: grid;
+        grid-template-rows: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 6vh;
+        max-height: 10vh;
+        width: 70%;
+        align-items: center;
+        text-align: center;
+        .page-title{
+            font-size: x-large;
+            color: #001559;
+            max-height: 8vh;
+        }
+        .page-title-active{
+            font-size: x-large;
+            color: #eab308;
+            max-height: 8vh;
+        }
+    }
+}
+.page-content{
+    background-color: #fff;
+    .page-title{
+        font-size: x-large;
+        font-weight:bolder;
+        color: #eab308;
+        margin-left: 4vh;
+    }
+
+    .company-slogan{
+        font-size: 60px;
+        font-weight: bolder;
+        line-height: 1;
+    }
+    .about-wrapper{
+        background-color: #fff;
+        display: grid;
+        grid-template-columns: [full-width-start] 2vw [breackout-start] 4vw  [content-start] 1fr [content-end] 4vw [breackout-end] 2vw [full-with-end];
+    }
+    .about-wrapper > :not(.full-width, .breackout){
+        grid-column: content;
+    }
+    .about-wrapper > .breackout {
+        grid-column: breackout;
+    }
+    .about-wrapper > .full-width {
+        grid-column: full-width;
+    }
+    /* display: grid;
+    width: 100%;
+    grid-template-columns: [full-width-start] 2vw [breackout-start] 4vw  [content-start] 1fr [content-end] 4vw [breackout-end] 4vw [full-with-end]; 
+    .page-content > .breackout {
+        grid-column: breackout;
+    } */
+}
+.paragraph{
+    font-size: larger;
+    line-height: 2rem;
+}
+.quote-wrapper{
+    /* margin-left: 8vh; */
+
+    margin: 0 0 30px 30px;
+    border-left: 4px solid #eab308;
+    padding: 0 0 0 15px;
+    .quote{
+        font-size: larger;
+        line-height: 2rem;
+        display: block;
+    }
+}
+.content-addings{
+    .cards{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        .card-wrapper{
+            display: grid;
+            width: 100%;
+            .service-card{
+                width: 18vw;
+                height: 25vh;
+                margin-left: auto;
+                margin-right: auto;
+                border: 3px solid #eab308;
+            }
+        }
+
+
+    }
+    .partners{
+        display: grid;
+        width: 100%;   
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+        .border-circle{
+            border-radius: 50% !important;
+            width: 4rem;
+            height: 4rem;
+            color: #fff !important;
+            background-color: #eab308 !important;
+        }
+
+        /* .wrapper{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+        }      */
+    } 
+
+}
+.content-more{
+    width: 100%;
+    height: 65vh;
+    .more{
+
+    }
+    .more-header{
+        border-top: 2px solid #eab308;
+        padding: 20px 0 20px 0 !important;
+    }
+    .more-content{
+        display: flex;
+        width: 100%;
+        .content-wrapper{
+            height: 35vh;
+        }
+        .content-card{
+            width: 32%;
+            height: 40vh;
+            margin-left: auto;
+            margin-right: auto;
+            border: 3px solid #eab308;
+            display: grid;
+            .content-img{
+                height: 100%;
+                width: 100%;
+            }
+            .sname{
+                position: absolute;
+                margin-top: 30vh;
+                margin-bottom: auto;
+                margin-left: 4vh;
+                color: #fff;
+            }
+        }
+    }
+}
+
+:host ::ng-deep .p-chip{
+    min-width: 10vw;
+    max-width: 12vw;
+    min-height: 10vh;
+    max-height: 12vh;
+}
+
+
+
 .two-blocks{
     width: 100%;
     display: grid;

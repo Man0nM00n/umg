@@ -1,61 +1,108 @@
-.slide-img{
-   width: 100%; 
-   height: auto;
+.slides{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin:0;
+    padding:0;
+}
+:host ::ng-deep .p-carousel-content{
+    display: contents;
+    width: 100vw;
+}
+:host ::ng-deep .p-carousel-container{
+    display: contents;
+    width: 100vw;
+}
+:host ::ng-deep .p-carousel-prev{
+    display: none;
+}
+:host ::ng-deep .p-carousel-next{
+    display: none;
 }
 :host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button{
     background-color: #eab308;
 }
-.hero{
-    display: flex;
-    /* grid-template-columns: 
-    [full-with-start]10px 10px [breackout-start] 100px [content-start] 1fr [content-end] 100px [breackout-end] 10px 10px [full-with-end];   */
+.slide-img{
+   width: 100%; 
+   height: 88vh;
 }
-.hero-text{
-    width: 50%;
+
+.catch-phrase {
+    position: absolute;
+    font-size: 3vw;
+    /* color: #001559; */
+    color:#fff;
+    margin-left: 3vw;
+    text-align: baseline;
+}
+.gold{
+    position: absolute;
+    margin-left: 80vw;
+    margin-top: 30vh;
+}
+.gold-img{
+    width: 8vw;
+}
+.top-viewed{
+    position: absolute;
     display: grid;
-/*     grid-template-rows: 2vh [phrase] 1vh 1vh 1vh [paragraph]  1vh  [adding] 1vh [buttons] 2vh ; */
-/*     grid-template-rows: 2vh 6vh 2vh [phrase] 6vh 2vh 2vh [paragraph] 4vh 4vh 2vh 2vh [adding]  2vh 4vh 4vh 4vh 2vh [buttons] 2vh; */
-    grid-template-rows: [phrase] auto [paragraph] auto [adding] auto [buttons] auto 4vh;
-}
-.hero-img-wrapper{
-    width: 50%;
-    clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%);
-}
-.hero-img{
+    grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
-    height: 100%; 
-    border-left: 2px solid #eab308;
+    margin-top: 55vh;
+    margin-bottom: 5vh!important;
 }
-.hero-section > * {
-    display: block;
-}
-.hero > :not(.full-width, .breackout){
-    grid-column: content;
-}
-  
-.hero > .breackout {
-    grid-column: breackout;
-}
-  
-.hero > .full-width {
-    grid-column: full-width;
-}
-.phrase{
-    grid-row: phrase;
-    margin-left: 4vh;
+.top-card{
+    background-color: #001559;
+    /* background-color: #eab308; */
+    margin-left: auto;
     margin-right: auto;
-    font-size: 4rem;
-    font-family: "Courier New", Courier, monospace;
-    line-height: 1;
+    width: 30vw;
+    height: 24vh;
+    text-align: center;
 }
-.paragraph1{
-    grid-row: paragraph;
-    margin-left: 2vw;
+.card-title{
+    color: #fff;
+    font-size: 1.2vw;
+    margin-top: 6vh;
 }
-.paragraph2{
-    grid-row: adding;
-    margin-left: 2vw;
+.card-subtext{
+    color: #fff;
+    font-size: 2vw;
+    margin-top: 4vh;
 }
+.fleet-location{
+    background-color: #001559;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    max-height: 60vh;
+    min-height: 50vh;
+}
+.fleet-text{
+    display: grid;
+    grid-template-rows:  1fr ;
+}
+.fleet-title{
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 2.5vw; 
+    color: #fff;
+}
+.quote{
+    margin-right: auto;
+    margin-left: auto;
+    color: #fff;
+    font-size: 1.4vw;
+    text-align: center;
+}
+.fleet-carousel{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 30vw;
+}
+
+
 .hero-buttons{
     grid-row: buttons;
     margin-right: auto;
@@ -63,7 +110,7 @@
 }
 :host ::ng-deep .p-button{
     background: #eab308;
-    border: 4px solid #0229ac;
+    border: 4px solid #001559;
     padding: 15px;    
 }
 .services-header{
@@ -73,30 +120,38 @@
 .services-wrapper{
     display: grid;
     grid-template-rows: auto;
-    margin-top: 4vh;
+    margin-top: 2vh;
 }
 .services{
     display: flex;
     width: 100%;
-    .service-card{
-        width: 20vw;
-        margin-left: auto;
-        margin-right: auto;
-        border: 2px solid #0229ac;
+    .wrapper{
+        display: grid;
+        width: 100%;
+        .service-card{
+            width: 28vw;
+            margin-left: auto;
+            margin-right: auto;
+            border: 3px solid #eab308;
+        }
     }
+    
     /* .services-header{
         
     } */
     .service-img{
-        height: 45vh;
+        height: 44vh;
         width: 100%;
     }
     .service-name{
-        height: 10vh;
+        margin-top: 0;
+        height: 8vh;
+        background-color: #001559;
         align-content: center;
         grid-template-columns: auto [content] auto;
         display: grid;
-        .name{
+        .sname{
+            color: #fff;
             grid-column: content;
         }
     }      
@@ -105,31 +160,14 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 4vh;
-    margin-bottom: 4vh;
+    margin-bottom: 2vh;
 }
 /* :host ::ng-deep .p-card .p-component{
 } */
 .test{
     background: #0229ac;
 }
-:host ::ng-deep .p-carousel-content{
-    background-color: #001559;
-}
-/* .add-wrapper{
-    display: grid;
-    grid-template-columns: 
-    [full-with-start] 2vw 10px [breackout-start] 100px [content-start] 1fr [content-end] 100px [breackout-end] 10px 2vw [full-with-end]; 
-    width: 100%;
-}
-.add-wrapper > :not(.full-width, .breackout){
-    grid-column: content;
-}
-.add-wrapper > .full-width{
-    grid-column: fullwidth;
-}
-.add-wrapper > .breackout{
-    grid-column: breackout;
-} */
+
 .two-blocks{
     width: 100%;
     display: grid;
@@ -147,6 +185,8 @@
         font-style: oblique;
         align-self: center;
         text-align: center;
+        font-size: 3rem;
+        color: #fff;
     }
     .block-text-wrapper{
         grid-row: paragraph;
@@ -159,8 +199,9 @@
         display: block;
         overflow: auto;
         margin-left: auto;
-        font-size: larger;
-        line-height: 2rem;
+        font-size: 1.6rem;
+        color: #001559;
+        /* line-height: 2rem; */
     }
 }
 .right-block.text-block{
@@ -171,6 +212,8 @@
         font-style: oblique;
         align-self: center;
         text-align: center;
+        font-size: 3rem;
+        color: #fff;
     }
     .block-text-wrapper{
         grid-row: paragraph;
@@ -183,15 +226,17 @@
         display: block;
         overflow: auto;
         margin-right: auto;
-        font-size: larger;
-        line-height: 2rem;
+        font-size: 1.6rem;
+        color: #fff;
+        /* line-height: 2rem; */
     }
 }
 .right-block{
-    background-color: #0229ac;
+    background-color: #001559;
     width: 100%;
 }
 
 .block-img{
     width: 100%;
+    max-height: 70vh;
 }

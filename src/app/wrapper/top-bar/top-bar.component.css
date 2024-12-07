@@ -1,9 +1,68 @@
-.logo-bar{
+.nav-menu{
 
+.flex-right{
+    margin-left: auto;
+    margin-right: 2%;
+}
+}
+:host ::ng-deep .nav-menu > .p-toolbar{
+    display: flex;
+    align-items: center;
+    justify-content:unset ;
+    flex-wrap: wrap;
+
+    }
+:host ::ng-deep .hidden-menubar > .p-menubar{
+    border-style: hidden;
+    font-size: large;
+    margin-left: 0;
+
+    
+}
+:host ::ng-deep .hidden-menubar > .p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon {
+    display: none;
+}
+:host ::ng-deep .p-menubar .p-menubar-root-list .p-icon-wrapper, .p-menubar .p-submenu-list .p-menuitem-link .p-icon-wrapper{
+    display: none;
+}
+:host ::ng-deep .p-menubar-root-list > .p-menuitem-active > p-menubarsub > .p-submenu-list {
+    display: grid;
+    color: #eab308;
+    max-width: 100vw;
+    /* width: 80vw; */
+    width:max-content ;
+    grid-template-rows: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */    
 }
 
+:host ::ng-deep .p-menubar-mobile-active{
+    display: none;
+}
+
+:host ::ng-deep .p-menubar-root-list > .p-menuitem-active > p-menubarsub > .p-submenu-list .subMenu{
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ align-items: center;
+}
+:host ::ng-deep .p-menubar-root-list > .p-menuitem-active > p-menubarsub > .p-submenu-list .menu1 {
+    width: 81.1vw;
+}
+:host ::ng-deep .p-menubar-root-list > .p-menuitem-active > p-menubarsub > .p-submenu-list .menu2 {
+    width: 72vw;
+}
+:host ::ng-deep .p-menubar-root-list > .p-menuitem-active > p-menubarsub > .p-submenu-list .menu3 {
+    width: 62.9vw;
+}
+:host ::ng-deep .p-menubar-root-list > .p-menuitem-active > p-menubarsub > .p-submenu-list .subMenu-img{
+    height: 80px;
+    width: 10vw;
+    margin-right: 0;
+    margin-left: auto;
+}
 .logo{
-    max-height: 70px;
+    margin-left: 1.5%;
+    max-height: 80px;
+    margin-right: 0.5%;
 }
 .contact-wrapper{
     margin-block-start: -5%;
@@ -70,7 +129,7 @@
 }
 
 
-:host ::ng-deep .p-menubar{
+:host ::ng-deep .stripped > .p-menubar {
     align-items: center;
     padding: 0rem;
     background-color: #eab308;
