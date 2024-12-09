@@ -46,10 +46,11 @@
     .about-wrapper > .full-width {
         grid-column: full-width;
     }
-    /* display: grid;
+}
+.more-content{
+    display: flex;
     width: 100%;
-    grid-template-columns: [full-width-start] 2vw [breackout-start] 4vw  [content-start] 1fr [content-end] 4vw [breackout-end] 4vw [full-with-end]; 
-    .page-content > .breackout {
-        grid-column: breackout;
-    } */
+    .content-wrapper{
+        height: 35vh;
+    }
 }

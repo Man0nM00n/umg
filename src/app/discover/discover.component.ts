@@ -77,38 +77,6 @@ export class DiscoverComponent {
   
           ],
           addings:[
-            // {
-            //   class:"full-width two-blocks",
-            //   type: "block",
-            //   blocks:[
-            //     {
-            //       class: "left-block text-block",
-            //       text:true,
-            //       title:"Exploration Drilling",
-            //       paragraphs:[
-            //         { 
-            //           text: "As a leading mining contractor specializing in production drilling and grade control, our company is committed to delivering high-quality, efficient, and safe drilling solutions to meet the needs of our clients in the mining industry. With years of experience and a focus on innovation, we ensure the success of your project from exploration to core extraction."
-            //         },
-            //         { 
-            //           text: "We provide a range of processing and refining services to help you extract the maximum value from your mineral resources."
-            //         },
-            //         { 
-            //           text: "UMG can also manage the entire logistics chain, ensuring that your project's materials and products reach their destinations on time and within budget."
-            //         }
-            //       ],
-        
-            //     },
-            //     {
-            //       class: "right-block ",
-            //       text:false,
-            //       imageSrc: "production.avif",
-            //       imageClass:"block-img",
-            //       phrase:"Maximizing Your Mining Project's Potential"
-                  
-            //     }
-            //   ],
-        
-            // },
             {
               class:"full-width cards",
               type: "card",
@@ -142,21 +110,18 @@ export class DiscoverComponent {
           text: "You might also be interested in ",
           content:[
             {
-              name: "DRILL & BLAST",
-              url: "services/drill",
-              value: "drill",
+              name: "OUR COMPANY",
+              url: "/about/company",
+              imageSrc: "drilling.jpg",
+            },
+            {
+              name: "OUR PROJECTS",
+              url: "/projects",
               imageSrc: "drill.jpg",
             },
             {
-              name: "GRADE CONTROL",
-              url: "",
-              value: "grade",
-              imageSrc: "grader.png",
-            },
-            {
-              name: "FLEET RENTAL",
-              url: "/services",
-              value: "rental",
+              name: "OUR PARTNERS",
+              url: "/partners",
               imageSrc: "locate.jpg",
             }
           ],
@@ -190,7 +155,7 @@ export class DiscoverComponent {
                 {
                   class: "left-block text-block",
                   text:true,
-                  title:"Exploration Drilling",
+                  title:"Drilling Services",
                   paragraphs:[
                     { 
                       // text: "As a leading mining contractor specializing in production drilling and grade control, our company is committed to delivering high-quality, efficient, and safe drilling solutions to meet the needs of our clients in the mining industry. With years of experience and a focus on innovation, we ensure the success of your project from exploration to core extraction."
@@ -213,7 +178,7 @@ export class DiscoverComponent {
                 {
                   class: "right-block ",
                   text:false,
-                  imageSrc: "production.avif",
+                  imageSrc: "fleet4.jpg",
                   imageClass:"block-img",
                   phrase:"Maximizing Your Mining Project's Potential"
                   
@@ -227,21 +192,24 @@ export class DiscoverComponent {
           text: "You might also be interested in ",
           content:[
             {
-              name: "DRILL & BLAST",
-              url: "services",
-              value: "drilling",
+              name: "OUR COMPANY",
+              url: "/about/company",
+              imageSrc: "drilling.jpg",
+            },
+            {
+              name: "OUR PROJECTS",
+              url: "/projects",
               imageSrc: "drill.jpg",
             },
-            // {
-            //   name: "GRADE CONTROL",
-            //   url: "",
-            //   imageSrc: "grader.png",
-            // },
+            {
+              name: "OUR PARTNERS",
+              url: "/partners",
+              imageSrc: "locate.jpg",
+            },
             {
               name: "FLEET RENTAL",
-              url: "/services",
-              value: "rental",
-              imageSrc: "locate.jpg",
+              url: "/services/rental",
+              imageSrc: "fleet5.jpg",
             }
           ],
         },
@@ -288,9 +256,9 @@ export class DiscoverComponent {
                 {
                   class: "right-block ",
                   text:false,
-                  imageSrc: "production.avif",
+                  imageSrc: "grade.png",
                   imageClass:"block-img",
-                  phrase:"Maximizing Your Mining Project's Potential"
+                  phrase:"Great Control techniques for better decisionning"
                   
                 }
               ],
@@ -302,20 +270,18 @@ export class DiscoverComponent {
           text: "You might also be interested in ",
           content:[
             {
-              name: "DRILL & BLAST",
-              url: "services",
-              value: "drilling",
+              name: "OUR COMPANY",
+              url: "/about/company",
+              imageSrc: "drilling.jpg",
+            },
+            {
+              name: "OUR PROJECTS",
+              url: "/projects",
               imageSrc: "drill.jpg",
             },
-            // {
-            //   name: "GRADE CONTROL",
-            //   url: "",
-            //   imageSrc: "grader.png",
-            // },
             {
-              name: "FLEET RENTAL",
-              url: "/services",
-              value: "rental",
+              name: "OUR PARTNERS",
+              url: "/partners",
               imageSrc: "locate.jpg",
             }
           ],
@@ -359,7 +325,7 @@ export class DiscoverComponent {
                 {
                   class: "right-block ",
                   text:false,
-                  imageSrc: "production.avif",
+                  imageSrc: "fleet5.jpg",
                   imageClass:"block-img",
                   phrase:"BEST EQUIPMENTS AT AFFORDABLE PRICES !"
                   
@@ -398,19 +364,21 @@ export class DiscoverComponent {
           content:[
             {
               name: "DRILL & BLAST",
-              url: "services",
-              value: "drilling",
+              url: "/services/drill",
+              imageSrc: "drill.jpg",
+            },{
+              name: "OUR COMPANY",
+              url: "/about/company",
+              imageSrc: "drilling.jpg",
+            },
+            {
+              name: "OUR PROJECTS",
+              url: "/projects",
               imageSrc: "drill.jpg",
             },
-            // {
-            //   name: "GRADE CONTROL",
-            //   url: "",
-            //   imageSrc: "grader.png",
-            // },
             {
-              name: "FLEET RENTAL",
-              url: "/services",
-              value: "rental",
+              name: "OUR PARTNERS",
+              url: "/partners",
               imageSrc: "locate.jpg",
             }
           ],
@@ -438,20 +406,18 @@ export class DiscoverComponent {
           text: "You might also be interested in ",
           content:[
             {
-              name: "DRILL & BLAST",
-              url: "services",
-              value: "drilling",
+              name: "OUR COMPANY",
+              url: "/about/company",
+              imageSrc: "drilling.jpg",
+            },
+            {
+              name: "OUR PROJECTS",
+              url: "/projects",
               imageSrc: "drill.jpg",
             },
-            // {
-            //   name: "GRADE CONTROL",
-            //   url: "",
-            //   imageSrc: "grader.png",
-            // },
             {
-              name: "FLEET RENTAL",
-              url: "/services",
-              value: "rental",
+              name: "OUR PARTNERS",
+              url: "/partners",
               imageSrc: "locate.jpg",
             }
           ],
@@ -459,166 +425,9 @@ export class DiscoverComponent {
 
       },
       
-
-      // {
-      //   name: "Our team",
-      //   value:"team",
-      //   content:{
-      //     slogan:"Our leadership team",
-      //     blocks:[
-      //       {
-      //         imageSrc: "opm.png",
-      //         name: "SAMUEL PAWENDTAORE KABRE",
-      //         position: "OPERATIONS MANAGER",
-      //         paragraphs:[
-      //           {
-      //             text: "He is the founder of the company and Operations Manager with a demonstrated history of working in the mining and construction industry. He is a seasoned mining engineer with over 7 years extensive training and working experience in drill and blast, logistics and haulage projects. He is an innovator who is enthusiastic.",
-      //             class:"quote paragraph"
-      //           },
-      //           {
-      //             text: "He led, direct, and control the activities of multiple business units and all their ongoing operations within a variety of entities in Burkina Faso and Africa at large so that the organisations achieve their short and long term financial and operating objectives as set by the overall corporate business plan.",
-      //             class:"quote paragraph"
-      //           },
-      
-      //         ]
-      //       },
-      //       {
-      //         imageSrc: "tsm.png",
-      //         name: "MAXWELL BENON-IB KUUZUME",
-      //         position: "TECHNICAL SERVICES MANAGER",
-      //         paragraphs:[
-      //           {
-      //             text: "Maxwell Benon-ib Kuuzume brings extensive local and expatriate experience in mining operations most especially drill and blast in west Africa and Africa at large, including managing diverse teams, expert technology and logistics, implementing effective strategies and building relationships with stakeholders.",
-      //             class:"quote paragraph"
-      //           },
-      //           {
-      //             text: "He has demonstrated exceptional leadership in overseeing mining operations in multiple African countries. Maxwell’s technical expertise and strategic thinking have been widely recognized in the mining industry, and he continues to inspire and mentor young professionals in the field. Finally, it is a delight to announce that Maxwell is also certified project Management professional (PMP) with sound experience in executing projects across West Africa.",
-      //             class:"quote paragraph"
-      //           },
-      
-      //         ]
-      //       },
-  
-      //     ],
-      //       },
-      //   more:{
-      //     text: "You might also be interested in ",
-      //     content:[
-      //       {
-      //         name: "DRILL & BLAST",
-      //         url: "services",
-      //         value: "drilling",
-      //         imageSrc: "drill.jpg",
-      //       },
-      //       // {
-      //       //   name: "GRADE CONTROL",
-      //       //   url: "",
-      //       //   imageSrc: "grader.png",
-      //       // },
-      //       {
-      //         name: "FLEET RENTAL",
-      //         url: "/services",
-      //         value: "rental",
-      //         imageSrc: "locate.jpg",
-      //       }
-      //     ],
-      //   },
-      // }
     ];
 
   // slogan="We are specialized in drill & blast and grade control !";
-  addings:any[]=[
-    {
-      class:"full-width two-blocks",
-      blocks:[
-        {
-          class: "left-block text-block",
-          text:true,
-          title:"Exploration Drilling",
-          paragraphs:[
-            { 
-              text: "As a leading mining contractor specializing in production drilling and grade control, our company is committed to delivering high-quality, efficient, and safe drilling solutions to meet the needs of our clients in the mining industry. With years of experience and a focus on innovation, we ensure the success of your project from exploration to core extraction."
-            },
-            { 
-              text: "We provide a range of processing and refining services to help you extract the maximum value from your mineral resources."
-            },
-            { 
-              text: "UMG can also manage the entire logistics chain, ensuring that your project's materials and products reach their destinations on time and within budget."
-            }
-          ],
-
-        },
-        {
-          class: "right-block ",
-          text:false,
-          imageSrc: "production.avif",
-          imageClass:"block-img",
-          phrase:"Maximizing Your Mining Project's Potential"
-          
-        }
-      ],
-
-    },
-    {
-      class:"full-width two-blocks",
-      blocks:[
-        {
-          class: "left-block text-block",
-          text:true,
-          title:"Production Drilling",
-          paragraphs:[
-            { 
-              text: "As a leading mining contractor specializing in production drilling and grade control, our company is committed to delivering high-quality, efficient, and safe drilling solutions to meet the needs of our clients in the mining industry. With years of experience and a focus on innovation, we ensure the success of your project from exploration to core extraction."
-            },
-            { 
-              text: "We provide a range of processing and refining services to help you extract the maximum value from your mineral resources."
-            },
-            { 
-              text: "UMG can also manage the entire logistics chain, ensuring that your project's materials and products reach their destinations on time and within budget."
-            }
-          ],
-
-        },
-        {
-          class: "right-block ",
-          text:false,
-          imageSrc: "production.avif",
-          imageClass:"block-img",
-          phrase:"Maximizing Your Mining Project's Potential"
-          
-        }
-      ],
-
-    },
-    {
-      class:"full-width two-blocks",
-      blocks:[
-        {
-          class: "left-block",
-          text:false,
-          imageSrc: "development.jpg",
-          imageClass:"block-img",
-          phrase:""
-        },
-        {
-          class: "right-block text-block",
-          text:true,
-          title:"DEVELOPMENT OF MINING PROJECT ",
-          paragraphs:[
-            { 
-              text: " As a leading mining entrepreneurship, we specialize in providing top-notch development services to help unlock the full potential of your mining project. Our team of experts has years of experience in the industry and is dedicated to delivering exceptional results."
-            },
-            { 
-              text: " We offer mine design and planning services to help you optimize your project's layout, minimize risks, and maximize productivity."
-            }
-          ],
-          
-        }
-      ],
-
-    },
-
-  ];
 
 
   navigate(npage:any){
@@ -650,8 +459,7 @@ export class DiscoverComponent {
 
   goTo(page:any){
     console.log(page);
-    this._router.navigate([page.url+'/'+page.value]);
-    this.activePage=page.value;
+    this._router.navigate([page.url]);
   }
 
   ngOnInit() {

@@ -72,19 +72,17 @@ export class AboutComponent {
         content:[
           {
             name: "DRILL & BLAST",
-            url: "services",
-            value: "drilling",
+            url: "/services/drill",
             imageSrc: "drill.jpg",
           },
-          // {
-          //   name: "GRADE CONTROL",
-          //   url: "",
-          //   imageSrc: "grader.png",
-          // },
+          {
+            name: "GRADE CONTROL",
+            url: "/services/grade",
+            imageSrc: "drilling.jpg",
+          },
           {
             name: "FLEET RENTAL",
-            url: "/services",
-            value: "rental",
+            url: "/services/rental",
             imageSrc: "locate.jpg",
           }
         ],
@@ -136,19 +134,17 @@ export class AboutComponent {
         content:[
           {
             name: "DRILL & BLAST",
-            url: "services",
-            value: "drilling",
+            url: "/services/drill",
             imageSrc: "drill.jpg",
           },
-          // {
-          //   name: "GRADE CONTROL",
-          //   url: "",
-          //   imageSrc: "grader.png",
-          // },
+          {
+            name: "GRADE CONTROL",
+            url: "/services/grade",
+            imageSrc: "drilling.jpg",
+          },
           {
             name: "FLEET RENTAL",
-            url: "/services",
-            value: "rental",
+            url: "/services/rental",
             imageSrc: "locate.jpg",
           }
         ],
@@ -291,7 +287,7 @@ export class AboutComponent {
 
   goTo(page:any){
     console.log(page);
-    this._router.navigate([page.url+'/'+page.value]);
+    this._router.navigate([page.url]);
   }
 
   ngOnInit() {

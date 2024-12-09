@@ -6,10 +6,10 @@
     <div class="wrapper">
         <div class="page-nav">
             <div class="nav-ul">
-                <ng-template ngFor let-item [ngForOf]="pages" class="nav">
+                <button class="button-nav" *ngFor="let item of pages">
                     <span *ngIf="item.value!=activePage" (click)="navigate(item)" class="page-title"><h4>{{item.name}}</h4></span>
                     <span *ngIf="item.value==activePage"  class="page-title-active"><h4>{{item.name}}</h4></span>
-                </ng-template>
+                </button>
             </div>
         </div>
 

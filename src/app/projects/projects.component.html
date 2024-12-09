@@ -25,6 +25,18 @@
                 </ng-template>
             </div>
 
+            <div class="content content-more">
+                    <h2 class="more-header">{{more.text | uppercase}}</h2>
+                    <div class="more-content">
+                        <ng-template ngFor let-item [ngForOf]="more.content" let-i="index" class="content-wrapper">
+                            <div (click)="goTo(item)" class="content-card">
+                                <img src={{item.imageSrc}} alt="" class="content-img">
+                                    <h2 class="sname">{{item.name}}</h2>
+                            </div>
+                        </ng-template>
+                    </div>
+            </div> 
+
         </div>
 
     </div>
