@@ -67,11 +67,11 @@ export class TopBarComponent {
       items:[
         {     
           label: '<div class="subMenu menu1"> <div> <h3>Our Company</h3> <h6> UMG is a trusted company that offers top-notch services for all your mining related projects ! </h6> </div> <img class="subMenu-img" src="logo.svg"/> </div>',
-          url:"/about/company"
+          url:"about/company"
         },
         {
           label: '<div class="subMenu menu1"> <div><h3> Our Team </h3> <h6> Discover our managing team and their leadership and vision ! </h6> </div> <img class="subMenu-img" src="team.jpg"/> </div>',
-          url: "/about/team"
+          url: "about/team"
         }
       ]
     },
