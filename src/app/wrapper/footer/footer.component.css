@@ -26,6 +26,7 @@
     grid-column: quick-links;
     min-width: 14vw;
     max-width: 15vw;
+    background-color: #eab308;
     align-items: center;
     align-content: center;
     ul {
@@ -38,6 +39,21 @@
             grid-column: element;
             margin-top: 1vh;
             margin-bottom: 0.5vh;
+            border: 2px solid #001559;
+            background-color: #fff;
+            a{
+                color: #001559;
+            }
+        }
+        li:hover{
+            grid-column: element;
+            margin-top: 1vh;
+            margin-bottom: 0.5vh;
+            border: 2px solid #001559;
+            background-color: #001559;
+            a{
+                color: #fff;
+            }
         }
     }
 }
