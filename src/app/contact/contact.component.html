@@ -1,26 +1,37 @@
-<div class="page-title">
-    <br>
-    <br>
-    <br>
-    <br>
-    <span class="title">Partners</span>
-</div>
-
-<div class="page-wrapper">
-    <div class="page-content">
+    <div class="content">
         
         <div class="partners">
-            <ng-template ngFor let-item [ngForOf]="partners" let-i="index" class="partners-wrapper">
-                <div class="carret">
-                    <div class="partner-card">
-                        <img src={{item.imageSrc}} alt="" class="partner-img">
-                            <div class="service-name">
-                                <h2 class="centered name">{{item.name}}</h2>
-                            </div>
+                <div class="partner-wrapper">
+                    <!-- <article class="card-partner" *ngFor="let item of partners">
+                        <div class="img-wrapper">
+                            <img src={{item.imageSrc}} alt="" class="img-partner">
+                        </div>
+                        <div class="info-wrapper">
+                            <span class="name">
+                                {{item.name}}
+                            </span>
+                            <span class="caption">
+    
+                            </span>
+                            <p class="dsecription">{{item.describe}}</p>
+                        </div>
+                    </article> -->
+                    <article class="card" *ngFor="let item of partners">
+                        <div class="temporary_text">
+                            <img src={{item.imageSrc}} alt="" class="img-partner">
+                        </div>
+                    <div class="card_content">
+                        <span class="card_title">
+                            {{item.name}}
+                        </span>
+                            <span class="card_subtitle">{{item.caption}}</span>
+                            <p class="card_description">{{item.describe}}</p>
+                        
                     </div>
+                    </article>
+
                 </div>
-            </ng-template>
+
         </div>
 
     </div>
-</div>    

@@ -1,0 +1,415 @@
+/* You can add global styles to this file, and also import other style files */
+// @import "primeicons/primeicons.css";
+// $flag-icons-path: '~flag-icons/flags';
+// $flag-icons-included-countries: 'gb', 'fr', 'de', 'es';
+// $flag-icons-use-square: false;
+// @import '~flag-icons/sass/flag-icons.scss';
+// @import "../node_modules/flag-icons/sass/flag-icons.scss";
+html, body, app-root {
+  height: 100%;
+}
+body {
+    display: block;
+    height:100%;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'MuseoSlab-1000';
+  }
+.centered{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+:root{
+  --primary-color: #eab308;
+  font-family: 'MuseoSlab-1000';
+}
+.anker-wrapper{
+  width: 100%;
+  height: 60vh;
+}
+.anker{
+  width: 100%;
+  height: 100%;
+}
+.two-blocks{
+  width: 100%;
+  display: grid;
+  height: max-content;
+  grid-template-columns: 1fr 1fr;
+}
+.left-block{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  
+}
+.left-block.text-block{
+  display: grid;
+  grid-template-rows: [title] auto  [paragraph];
+  .block-title{
+      grid-row: title;
+      font-style: oblique;
+      font-size: xx-large;
+      align-self: center;
+      text-align: center;
+  }
+  .block-text-wrapper{
+      grid-row: paragraph;
+      display: grid;
+      grid-template-columns:   
+      [full-width-start] auto 50px [breackout-start] auto 50px [content-start] 1fr [content-end] 50px auto [breackout-end] 50px auto [full-width-end];
+  }
+  .p-text{
+      grid-column: breackout;
+      display: block;
+      overflow: auto;
+      margin-left: auto;
+      font-size: x-large;
+      line-height: 2rem;
+  }
+}
+.right-block.text-block{
+  display: grid;
+  grid-template-rows: [title] auto  [paragraph];
+  .block-title{
+      grid-row: title;
+      font-style: oblique;
+      font-size: xx-large;
+      align-self: center;
+      text-align: center;
+  }
+  .block-text-wrapper{
+      grid-row: paragraph;
+      display: grid;
+      grid-template-columns:   
+      [full-width-start] auto 50px [breackout-start] auto 50px [content-start] 1fr [content-end] 50px auto [breackout-end] 50px auto [full-width-end];
+  }
+  .p-text{
+      grid-column: breackout;
+      display: block;
+      overflow: auto;
+      margin-right: auto;
+      font-size: larger;
+      line-height: 2rem;
+  }
+}
+.right-block{
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+
+.block-img{
+  width: 100%;
+  height: 100%;
+}
+.content-card{
+  width: 40%;
+  height: 35vh;
+  position: relative;
+  background-color: #001559;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 6px 6px 0 #001559;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-left: 1%;
+  margin-right: 1%;
+  display: grid;
+  .content-img{
+      height: 100%;
+      border: 3px solid #eab308;
+      width: 100%!important;
+  }
+  .content-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    }
+  .sname{
+      position: absolute;
+      margin-top: 30vh;
+      margin-bottom: auto;
+      margin-left: 4vh;
+      color: #fff;
+  }
+}
+.content-card:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 17px 17px 0 #001559;
+}
+.wrapper{
+  display: grid;
+  margin-top: -10vh;
+  width: 100%;
+  min-height: max-content;
+  grid-template-columns: 0.25fr 3fr 0.2fr;
+}
+.page-nav{
+  width: 100%;
+  min-height: 70%;
+  max-height: 80%;
+  margin-top: 10vh;
+  // .nav-ul{
+  //     width: 20vh;
+  // }
+  .nav-ul{
+    position: sticky;
+    height: fit-content;
+    top: 60vh;
+    left: 3vh;
+    right: 0;
+    bottom: 60vh;
+    align-content: space-evenly;
+    width: 4vw;
+    .button-nav{
+      background: #fff;
+      animation: jello-horizontal 0.9s both;
+      outline: none;
+      cursor:pointer;
+      height: 8vh;
+      margin-top: 1vh;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 20px;
+      width: 5vw;
+      .page-title{
+        color: #001559;
+        min-height: 6vh;
+        max-height: 8vh;
+        font-size: 1rem;
+        margin-bottom: auto;
+        margin-top: auto;
+      }
+      .page-title-active{
+        color: #eab308;
+        min-height: 6vh;
+        font-size: 1rem;
+        max-height: 8vh;
+        margin-bottom: auto;
+        margin-top: auto;
+      }
+    }
+    .button-nav:hover {
+      background: #001559;
+      color: #ffffff;
+      animation: squeeze 1s both;
+      .page-title{
+        color: #fff;
+        max-height: 8vh;
+      }
+    }
+  }
+
+}
+
+.content-more{
+  width: 100%;
+  height: 60vh;
+  .more-header{
+      border-top: 2px solid #eab308;
+      padding: 20px 0 20px 0 !important;
+  }
+  .more-content{
+      display: flex;
+      width: 100%;
+      .content-wrapper{
+          height: 35vh;
+      }
+  }
+}
+.page-content-full{
+  width: 100%;
+}
+
+.page-content{
+  display: grid;
+  width: 100%;
+  grid-template-columns: [full-width-start] 4vw [breackout-start] 4vw  [content-start] 1fr [content-end] 4vw [breackout-end] 4vw [full-with-end];
+}
+.page-content > :not(.full-width, .breackout){
+  grid-column: content;
+}
+.page-content > .breackout {
+  grid-column: breackout;
+}
+.page-content > .full-width {
+  grid-column: full-width;
+}
+.page-content{
+  background-color: #fff;
+  .page-title{
+      font-size: x-large;
+      font-weight:bolder;
+      color: #eab308;
+      margin-left: 4vh;
+  }
+
+  .company-slogan{
+      font-size: 60px;
+      font-weight: bolder;
+      line-height: 1;
+  }
+  // .about-wrapper{
+  //     background-color: #fff;
+  //     display: grid;
+  //     grid-template-columns: [full-width-start] 2vw [breackout-start] 4vw  [content-start] 1fr [content-end] 4vw [breackout-end] 2vw [full-with-end];
+  // }
+  // .about-wrapper > :not(.full-width, .breackout){
+  //     grid-column: content;
+  // }
+  // .about-wrapper > .breackout {
+  //     grid-column: breackout;
+  // }
+  // .about-wrapper > .full-width {
+  //     grid-column: full-width;
+  // }
+}
+
+ 
+@keyframes squeeze {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+.app-root{
+  width: 100%;
+}
+
+@media screen and (max-width: 1560px) {
+.wrapper{
+  grid-template-columns: 0.4fr 3fr 0.2fr;
+  .page-nav{
+    .nav-ul{
+      .button-nav{
+        width: 8vw;
+        .page-title{
+
+        }
+        .page-title-active{
+
+        }
+      }
+      .button-nav:hover{
+
+      }
+    }
+  }
+}
+
+}
+@media screen and ( max-width: 986px ) {
+  .wrapper{
+    grid-template-columns: 0.6fr 3fr 0.2fr;
+    .page-nav{
+      .nav-ul{
+        left: 2vh!important;
+        .button-nav{
+          width: 12vw;
+          .page-title{
+  
+          }
+          .page-title-active{
+            
+          }
+        }
+        .button-nav:hover{
+  
+        }
+      }
+    }
+  }
+  .two-blocks{
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 780px) {
+  .wrapper{
+    grid-template-columns: 0.7fr 3fr 0.2fr;
+    .page-nav{
+      .nav-ul{
+        .button-nav{
+          width: 14vw;
+          .page-title{
+  
+          }
+          .page-title-active{
+            
+          }
+        }
+        .button-nav:hover{
+  
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 516px) {
+  .wrapper{
+  }
+  .page-nav{
+      .nav-ul{
+          width: 12vh;
+      }
+  }
+  .wrapper{
+    grid-template-columns: 0.8fr 2.8fr 0.2fr;
+    .page-nav{
+      .nav-ul{
+        left: 1vw!important;
+        .button-nav{
+          width: 20vw;
+          .page-title{
+            font-size: 0.8rem;
+          }
+          .page-title-active{
+            font-size: 0.8rem;
+          }
+        }
+        .button-nav:hover{
+  
+        }
+      }
+    }
+  }
+  
+}

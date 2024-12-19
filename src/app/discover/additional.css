@@ -1,0 +1,144 @@
+@media screen and (max-width: 1560px) {
+    .button-nav{
+        width: 20vh;
+        height: 12vh;
+    }
+    .content-card{
+        height: 40vh;
+    }
+}
+@media screen and ( max-width: 986px ) {
+    .button-nav{
+        width: 10vh;
+        height: 12vh;
+        margin-left: 1vh;
+    }
+    .content-card{
+        height: 28vh;
+        .sname{
+            margin-top: 20vh;
+            margin-left: 4vh;
+        }
+    }
+    .content-more{
+        height: 40vh;
+    }
+    .content-addings{
+        .cards{
+            grid-template-columns: 1fr 1fr;
+            .card-wrapper{
+                margin-top: 2vh;
+                .service-card{
+                    width: 24vw;
+                    height: 20vw;
+                }
+                .service-card::before {
+                    width: 24vw;
+                    height: 20vw;
+
+                }
+                .service-card::after {
+                    width: 23vw;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    height: 19vw;
+                }
+            }
+        }
+    }
+
+}
+@media screen and ( max-width: 770px ) {
+    .button-nav{
+        width: 10vh;
+        height: 12vh;
+        margin-left: 1vh;
+        font-size: larger;
+    }
+    .content-addings{
+        .cards{
+            .card-wrapper{
+                .service-card{
+                    width: 30vw;
+                    height: 22vw;
+                    border-radius: 15px;
+                    .sname{
+                        font-size:1rem;
+                    }
+                }
+                .service-card::before {
+                    height: 22vw;
+                    animation: rotBGimg 4s linear infinite;
+                    width: 30vw;
+                }
+                .service-card::after {
+                    width: 28vw;
+                    height: 20vw;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    margin-left: auto;
+                    margin-right: auto;
+                    inset: 5px;
+                }
+            }
+        }
+    }
+    
+
+}
+@media screen and (max-width: 516px) {
+    .button-nav{
+        width: 12vh;
+        height: 12vh;
+        margin-left: 1vh;
+        font-size:large;
+    }
+    .content-card{
+        height: 28vh;
+        width: 80%;
+        margin-bottom: 2vh;
+        margin-left: auto;
+        margin-right: auto;
+        .sname{
+            margin-top: 20vh;
+            margin-left: 2vh;
+        }
+    }
+    .content-more{
+        height: max-content;
+        .more-content{
+            display: grid;
+            grid-template-rows: auto;
+        }
+    }
+    .content-addings{
+        .cards{
+            .card-wrapper{
+                .service-card{
+                    width: 30vw;
+                    height: 22vw;
+                    border-radius: 15px;
+                    .sname{
+                        font-size:1rem;
+                    }
+                }
+                .service-card::before {
+                    animation: rotBGimg 4s linear infinite;
+                    height: 22vw;
+                    width: 30vw;
+                }
+                .service-card::after {
+                    width: 28vw;
+                    height: 20vw;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    margin-left: auto;
+                    margin-right: auto;
+                    inset: 3px;
+                }
+            }
+        }
+    }
+}

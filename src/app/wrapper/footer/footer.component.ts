@@ -4,34 +4,34 @@ import { MenuItem } from 'primeng/api';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  styleUrls: ['./footer.component.css', './additional.css']
 })
 export class FooterComponent {
   menus: MenuItem[]=[
     {
       label: 'Home',
       icon: 'pi pi-home',
-      url:"/"
+      url:"/umg"
     },
     {
       label: 'About-Us',
       icon: 'pi pi-info-circle',
-      url:'/about'
+      url:'/umg/about/company'
     },
     {
       label: 'Services',
       icon: 'pi pi-verified',
-      url:"/services"
+      url:"/umg/services/presentation"
     },
     {
       label: 'Partners',
       icon: 'pi pi-briefcase',
-      url:"/partners"
+      url:"/umg/partners"
     },
     {
       label: 'Contact',
       icon: 'pi pi-id-card',
-      url:"/contacts"
+      url:"/umg/contacts"
     },
   ]
 }

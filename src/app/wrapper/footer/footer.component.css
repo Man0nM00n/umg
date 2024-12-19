@@ -2,29 +2,29 @@
     height: auto;
     margin-top: -36px;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
     background-color: #85b2f9;
-    
 }
 .footer-content {
     margin: 0 auto;
     text-align: center;
     display: grid;
-    grid-template-columns: auto [footer-logo] auto 8vw [quick-links] auto 2vw [newsletter] auto 2vw [contact] auto 2vw [map] auto 4vw;
+    grid-template-columns: auto [footer-logo] auto  [quick-links] auto  [newsletter] auto  [contact] auto [map] auto ;
 }
 .footer-logo{
     margin-top: 6vh;
     margin-left: auto;
-
     .flogo{
-        width: 250px;
+        max-width: 250px;
+        min-width: 100px;
     }
 }
 .links{
     grid-column: quick-links;
+    min-width: 14vw;
+    max-width: 15vw;
+    background-color: #eab308;
     align-items: center;
     align-content: center;
     ul {
@@ -37,15 +37,197 @@
             grid-column: element;
             margin-top: 1vh;
             margin-bottom: 0.5vh;
+            border: 2px solid #001559;
+            background-color: #fff;
+            a{
+                color: #001559;
+            }
+        }
+        li:hover{
+            grid-column: element;
+            margin-top: 1vh;
+            margin-bottom: 0.5vh;
+            border: 2px solid #001559;
+            background-color: #001559;
+            a{
+                color: #fff;
+            }
         }
     }
 }
 .news{
     grid-column: newsletter;
+    .news-card{
+        width: 18vw;
+        height: 100%;
+        padding: 20px;
+        background: #fff;
+        border: 6px solid #001559;
+        box-shadow: 12px 12px 0 #001559;
+        transition: transform 0.3s, box-shadow 0.3s;
+        .title {
+            font-size: 32px;
+            font-weight: 900;
+            color: #001559;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+        .news-card::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 90%;
+            height: 3px;
+            background-color: #000;
+            transform: translateX(-100%);
+            transition: transform 0.3s;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .form input {
+            padding: 10px;
+            border: 3px solid #001559;
+            font-size: 16px;
+            font-family: inherit;
+            transition: transform 0.3s;
+            width: calc(100% - 26px); /* Adjust for padding and border */
+        }
+        .form input:focus {
+            outline: none;
+            transform: scale(1.05);
+            background-color: #001559;
+            color: #ffffff;
+        }
+        .card-button {
+            border: 3px solid #001559;
+            background: #001559;
+            color: #eab308;
+            padding: 10px;
+            font-size: 18px;
+            left: 20%;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s;
+            width: 50%;
+            height: 100%;
+        }
+        .card-button::before {
+            content: "Sure?";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 105%;
+            background-color: #eab308;
+            color: #001559;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        .card-button:hover::before {
+            transform: translateY(0);
+        }
+          
+        .card-button:active {
+            transform: scale(0.95);
+        }
+          
+    }
+    .news-card:hover {
+        transform: translate(-5px, -5px);
+        box-shadow: 17px 17px 0 #001559;
+        title::after {
+            transform: translateX(0);
+          }
+    }
+    content {
+        font-size: 16px;
+        line-height: 1.4;
+        color: #000;
+        margin-bottom: 20px;
+    }
+      
 }
 .contacts{
     grid-column: contact;
+    width: 14vw;
+    background-color: #001559;
+    .title{
+         background-color: #eab308;  
+         color: #fff;  
+         text-shadow: 2px #000;                                                            
+    }
+    .block{
+        background-color: #fff;
+        width: 80%;
+        height: 60%;
+        margin-bottom: auto;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 30px;
+        border: 4px solid #85b2f9;
+    }
 }
 .map{
     grid-column: map;
 }
+
+@keyframes glitch {
+    0% {
+      transform: translate(2px, 2px);
+    }
+    25% {
+      transform: translate(-2px, -2px);
+    }
+    50% {
+      transform: translate(-2px, 2px);
+    }
+    75% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(2px, 2px);
+    }
+  }
+  
+  .glitch {
+    animation: glitch 0.3s infinite;
+  }
+
+  @media screen and (max-width: 1560px) {
+    .footer-logo{
+        .flogo{
+            max-width: 300px;
+            min-width: 200px;
+        }
+    }
+    .links{
+        width: 20vw;
+        ul{
+            li{
+                a{
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+    .news{
+        .news-card{
+            width: 22vw;
+        }
+    }
+  }
+

@@ -7,24 +7,35 @@
             <h3 class="text-xl font-semibold">Quick Links</h3>
             <ul class="mt-2" >
               <li *ngFor="let link of menus">
-                <a href="#" class="nav-link">{{link.label}}</a>
+                <a href={{link.url}} class="nav-link ">{{link.label}}</a>
               </li>
             </ul>
         </div>
         <div class="news">
-            <h3 class="text-xl font-semibold">Newsletter</h3>
+            <!-- <h3 class="text-xl font-semibold">Newsletter</h3>
             <p class="mt-2">Send us your email to receive our newsletter</p>
             <div class="flex mt-2">
               <input type="email" placeholder="Your Email" class="" />
               <button class="">Submit</button>
+            </div> -->
+            <div class="news-card">
+              <span class="title">Newsletter</span>
+              <p class="content">
+                Send us your email to receive our newsletter.
+              </p>
+              <form class="form">
+                <input required="" type="email" placeholder="Your email here" />
+                <button class="card-button">SEND</button>
+              </form>
             </div>
+            
         </div>
         <div class="contacts">
-            <h3 class="text-xl font-semibold">Contact us</h3>
-            <div class="mt-2">
-              <p>Ouagadougou, Burkina Faso</p>
-              <p>info</p>
-              <p>+226 25 36 54</p>
+            <h2 class="text-xxl font-semibold title">CONTACT US</h2>
+            <div class="mt-2 block">
+              <p>Ouagadougou <br> <br>Burkina Faso</p>
+              <p>infoumg.bf</p>
+              <p>+226 25 36 54 50</p>
             </div>
         </div>
 

@@ -9,6 +9,7 @@ import { AccordionModule } from 'primeng/accordion';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { CarouselModule } from 'primeng/carousel';
+import { ChipModule } from 'primeng/chip';
 import { ChipsModule } from 'primeng/chips';
 import { DividerModule } from 'primeng/divider';
 
@@ -45,6 +46,8 @@ import { TopBarComponent } from './wrapper/top-bar/top-bar.component';
 import { FooterComponent } from './wrapper/footer/footer.component';
 import { NewsLetterComponent } from './wrapper/news-letter/news-letter.component';
 import { CommonModule } from '@angular/common';
+import { FleetComponent } from './fleet/fleet.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +58,9 @@ import { CommonModule } from '@angular/common';
     AboutComponent,
     TopBarComponent,
     FooterComponent,
-    NewsLetterComponent
+    NewsLetterComponent,
+    FleetComponent,
+    ProjectsComponent
   ],
   imports: [
     AccordionModule,
@@ -65,6 +70,7 @@ import { CommonModule } from '@angular/common';
     CardModule,
     CarouselModule,
     CommonModule,
+    ChipModule,
     ChipsModule,
     DividerModule,
 

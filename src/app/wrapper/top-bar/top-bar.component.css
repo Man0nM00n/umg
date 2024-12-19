@@ -1,85 +1,95 @@
-.logo-bar{
+.nav-menu{
 
+.flex-right{
+    margin-left: auto;
+    margin-right: 1%;
+}
+}
+:host ::ng-deep .nav-menu > .p-toolbar{
+    display: flex;
+    align-items: center;
+    justify-content:unset ;
+    flex-wrap: wrap;
+
+    }
+:host ::ng-deep .hidden-menubar > .p-menubar{
+    border-style: hidden;
+    font-size: large;
+    margin-left: 0; 
+}
+:host ::ng-deep .hidden-menubar > .p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon {
+    display: none;
+}
+:host ::ng-deep .p-menubar .p-menubar-root-list .p-icon-wrapper, .p-menubar .p-submenu-list .p-menuitem-link .p-icon-wrapper{
+    display: none;
+}
+:host ::ng-deep .p-menubar-root-list > .p-menuitem-active > p-menubarsub > .p-submenu-list {
+    display: grid;
+    z-index: 1004;
+    position: absolute;
+    background-color: #fff;
+    color: #eab308;
+    float: left;
+    margin-right: 100%;
+    /* grid-template-rows: 1fr 1fr; */
+    grid-template-columns: 1fr 1fr; 
+    position: absolute !important;   /* Absolute positioning to detach it from its parent */
+    top: 100% !important;            /* Place it directly below the menu item */
+    left: 0 !important;              /* Start from the very left edge of the viewport */
+    width: 100vw !important;         /* Make the submenu span the full viewport width */
+    z-index: 1000;   
 }
 
+
+
+:host ::ng-deep .p-menubar-root-list > .p-menuitem-active > p-menubarsub > .p-submenu-list .subMenu{
+ display: grid;
+ /* grid-template-columns: 1fr 1fr; */
+ align-items: center;
+ position: relative;
+}
+:host ::ng-deep .p-menubar-root-list > .p-menuitem-active > p-menubarsub > .p-submenu-list .menu1 {
+    width: 50vw;
+}
+:host ::ng-deep .p-menubar-root-list > .p-menuitem-active > p-menubarsub > .p-submenu-list .menu2 {
+    width: 50vw;
+}
+:host ::ng-deep .p-menubar-root-list > .p-menuitem-active > p-menubarsub > .p-submenu-list .menu3 {
+    width: 50vw;
+}
+:host ::ng-deep .p-menubar-root-list > .p-menuitem-active > p-menubarsub > .p-submenu-list .subMenu-img{
+    height: 80px;
+    width: 10vw;
+    margin-right: 0;
+    margin-left: 10vh auto;
+}
 .logo{
-    max-height: 70px;
+    margin-left: 1.5%;
+    max-height: 80px;
+    margin-right: 0.5%;
 }
-.contact-wrapper{
-    margin-block-start: -5%;
-}
-.contact{
-    display: inline-grid;  
-    grid-template-rows: [full-span] 0px [contact-type] 8px [contact-icon] 18px [contact-value] ;
-    /* grid-template-columns: [icon] 5px [content] 4px; */
-    margin-left: 65px;
-}
-.contact > .contact-icon{
-    grid-row: contact-icon;
-    grid-column: icon;
-    margin-left: -40px;
-}
-.contact > .contact-type{
-    grid-row: contact-type;
-}
-.contact > .contact-value{
-    grid-row: contact-value;
-}
-.contact > .icon{
-    grid-column: icon;
-}
-.contact > .content{
-    grid-column: content;
-}
-.contact-icon{
-    font-size: 35px;
-    font-weight: 300;
-}
-.contact-type{
+
+
+
+
+
+
+@media screen and (max-width: 1302px) {
+    /* :host ::ng-deep .p-menubar-mobile-active{
+        position:absolute;
+        top: auto;
+        display: grid;
+        width: 70%;
+        grid-template-columns: 1fr;
+        height: 90vh;
+        z-index: 1005;
+    }
+    :host ::ng-deep .p-menubar-root-list{
+      z-index: 1004;
+      position: fixed;
+      width: 100%;
+      display: none;
+      margin-left: -32vw;
+    } */
     
 }
-.contact-value{
-
-}
-
-.menu-wrapper{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    background-color: #001559;
-    height: 50px;
-    margin-bottom: auto;
-}
-.left-fill{
-    background-color: #001559;
-}
-.card.menus{
-    background-color: #eab308;
-    height: 100%;
-
-    transform:skewX(25deg);
-    width: 100%;
-    margin-right: auto;
-
-/*     -webkit-transform-origin:100% 100%;
-    -ms-transform-origin:100% 100%;
-    transform-origin:top-left;
-
-    -webkit-transform:skewX(30deg);
-    -ms-transform:skewX(30deg);
-    transform:skewX(-25deg); */
-}
-
-
-:host ::ng-deep .p-menubar{
-    align-items: center;
-    padding: 0rem;
-    background-color: #eab308;
-    color: #0229ac;
-    float: right;
-    height: 100%;
-    margin-left: 30px;
-    width: 80%;
-    transform:skewX(-25deg);
-    border-color: #eab308;
-
-  }

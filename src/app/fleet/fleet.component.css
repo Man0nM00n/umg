@@ -1,0 +1,28 @@
+:host ::ng-deep .p-galleria{
+    margin-left: auto;
+    margin-right: auto;
+}
+:host ::ng-deep .p-galleria-content{
+    display: contents;
+    width: 100%;
+}
+:host ::ng-deep .p-carousel-container{
+    width: 100%;
+}
+:host ::ng-deep .p-galleria-item-prev-icon{
+    background-color: #eab308;
+}
+:host ::ng-deep .p-galleria-item-next-icon{
+    background-color: #eab308;
+}
+:host ::ng-deep .p-galleria-indicators{
+    background-color: #eab308;
+    opacity: 80%;
+}
+:host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button{
+    background-color: #eab308;
+}
+.slide{
+   width: 90%; 
+   height: 100%;
+}

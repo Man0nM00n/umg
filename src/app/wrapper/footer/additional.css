@@ -1,0 +1,79 @@
+@media screen and (max-width: 986px) {
+    .footer-content{
+        grid-template-rows: [sitemap] auto [contacts] auto [adding] auto;
+    }
+    .footer-logo{
+        grid-row: sitemap;
+    }
+    .links{
+        grid-row: sitemap;
+        grid-column: newsletter;
+        margin-left: 2vw;
+    }
+    .news{
+        grid-row: contacts;
+        margin-top: 1vh ;
+        .news-card{
+            width: 35vw;
+        }
+    }
+    
+  }
+
+  @media screen and (max-width: 780px) {
+    .footer-logo{
+        .flogo{
+            max-width: 200px;
+            min-width: 150px;
+        }
+    }
+    .news{
+        .news-card{
+            width: 36vw;
+        }
+    }
+    .contacts{
+        width: 18vw;
+    }
+    
+  }
+
+  @media screen and (max-width: 516px) {
+    .footer-content{
+        grid-template-columns: [footer-logo] 2vh auto [quick-links]  auto ;
+        width: 100%;
+    }
+    .footer-logo{
+        margin-left: 1vh!important;
+        margin-right: 1vh!important;
+        width:min-content;
+        .flogo{
+            max-width: 180px;
+            min-width: 160px;
+        }
+    }
+    .links{
+        max-width: max-content;
+        min-width: max-content;
+    }
+    .news{
+        grid-row: contacts;
+        grid-column: footer-logo;
+        margin-top: 1vh ;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        width: 80vw;
+        .news-card{
+            width: 100%;
+        }
+    }
+    .contacts{
+        grid-row: adding;
+        grid-column: footer-logo;
+        margin-top: 2vh ;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        width: 80vw;
+    }
+
+  }

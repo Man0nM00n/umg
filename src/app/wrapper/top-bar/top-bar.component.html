@@ -1,38 +1,26 @@
 <div class="navbar">
-    <p-toolbar 
-    class="logo-bar"
+    <p-toolbar class="nav-menu"
         styleClass="bg-gray-900" 
         [style]="{  }">
-        <ng-template pTemplate="start">
             <img class="logo" src="logo.svg"/>
-        </ng-template>
-        <ng-template pTemplate="center">
-            <div class="align-items-center gap-3 contacts" >
-                <ng-template ngFor let-item [ngForOf]="contacts" let-i="index" class="contact-wrapper">
-                    <span class="contact full-span">             
-                        <i class={{item.icon}}></i>
-                        <span class=" content contact-type">{{item.name}}</span>
-                        <span class="content contact-value">{{item.value}}</span>
-                    </span>
+
+            <p-menubar class="hidden-menubar"
+                [model]="barmenus"  >
+            </p-menubar>
+            <div class="flex-right align-items-right gap-2">
+                <div class="banner top-right">
+                    <span>We are proud to be from:</span>
+                    <!-- <span class="fi fi-bf fis"></span> -->
+                    <!-- <img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/flags/4x3/bf.svg" alt="Français" /> -->
+                </div>
+                <ng-template ngFor let-item [ngForOf]="contacts" let-i="index" class="contact-us">
+                    <p-button 
+                          label={{item.value}} [link]="true" />
+                </ng-template>
+                <ng-template pTemplate="mobile-active">
+
                 </ng-template>
             </div>
-        </ng-template>
-        <ng-template pTemplate="end">
-            <div class="flex align-items-center gap-2">
-              
-            </div>
-        </ng-template>
     </p-toolbar>
-
-    <div class="menu-wrapper">
-        <div class="left-fill">
-            
-        </div>
-        <div class="card menus">
-            <p-menubar 
-                [model]="menus" />            
-        </div>
-    </div>
-
 
 </div>

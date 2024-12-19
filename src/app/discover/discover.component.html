@@ -1,35 +1,133 @@
-<div class="page-title">
-    <br>
-    <br>
-    <br>
-    <br>
-    <span class="title">Our Services</span>
-</div>
-<div class="page-wrapper">
-    <div class="page-content">
-        <ng-template ngFor let-item [ngForOf]="addings" class="adding"> 
-            <div class={{item.class}}>
-                <ng-template ngFor let-block [ngForOf]="item.blocks" class="adding-block">
-                    <div class={{block.class}}  *ngIf="block.text; else elseBlock" >
-                        <h2 class="services block-title">{{block.title}}</h2>
-                        <div class="block-text-wrapper">
-                            <ng-template ngFor let-p [ngForOf]="block.paragraphs">
-                                <p class="p-text">{{p.text}}</p>
-                            </ng-template>
-                        </div>
-                    </div>
-                    <ng-template #elseBlock>
-                        <div class={{block.class}}>
-                            <img class={{block.imageClass}} src={{block.imageSrc}} alt="">
-                            <span class="catch-phrase">{{block.phrase}}</span>
-                        </div>
-                    </ng-template>
-                </ng-template>
-
-            </div>
-            <br>
-        </ng-template>
+<div class="content">
+    <div class="anker-wrapper">
+        <img src="shows.jpg" alt="" class="anker"> 
     </div>
+
+    <div class="wrapper">
+        <div class="page-nav">
+            <div class="nav-ul">
+                <button class="button-nav" *ngFor="let item of pages">
+                    <span *ngIf="item.value!=activePage" (click)="navigate(item)" class="page-title"><h4>{{item.name}}</h4></span>
+                    <span *ngIf="item.value==activePage"  class="page-title-active"><h4>{{item.name}}</h4></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="page-content">
+
+            <div class="breackout about-wrapper">
+                <ng-template ngFor let-item [ngForOf]="contents" class="nav">
+                    <div *ngIf="item.value==activePage" class="full-width content-header">
+                        <h2 class="page-title">{{item.name | uppercase}}</h2>
+                        <br>
+                        <h1 class="company-slogan">{{item.content.slogan}}</h1>
+                    </div>
+                    <div  *ngIf="item.value==activePage && item.content.paragraphs" class="breackout content-main">
+                        <ng-template ngFor let-p [ngForOf]="item.content.paragraphs">
+                            <p *ngIf="p.class!='quote paragraph'" class={{p.class}}>{{p.text}}</p>
+                            <blockquote *ngIf="p.class=='quote paragraph'" class="quote-wrapper">
+                                <p class={{p.class}}>{{p.text}}</p>
+                            </blockquote>
+                        </ng-template>
+                    </div>
+                    <div *ngIf="item.value==activePage && item.content.blocks" class="breackout content-blocks">
+                        <ng-template ngFor let-block [ngForOf]="item.content.blocks">
+                            <div class="block-wrapper">
+                                <br>
+                                <div class="leader-card">
+                                    <div class="photo">
+                                        <img src={{block.imageSrc}} alt="" class="content-img">
+                                    </div>
+                                    <div class="brief">
+                                        <h3 class="name">{{block.name}}</h3>
+                                        <h5 class="position">{{block.position}}</h5>
+                                        <ng-template ngFor let-p [ngForOf]="block.paragraphs">
+                                            <p *ngIf="p.class!='quote paragraph'" class={{p.class}}>{{p.text}}</p>
+                                            <blockquote *ngIf="p.class=='quote paragraph'" class="quote-wrapper">
+                                                <p class={{p.class}}>{{p.text}}</p>
+                                            </blockquote>
+                                        </ng-template>
+    
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        </ng-template>
+                    </div>
+
+                    <div *ngIf="item.value==activePage && item.content.addings" class="full-width content-addings">
+                        <ng-template ngFor let-add [ngForOf]="item.content.addings" class="adding"> 
+                            <div class={{add.class}} *ngIf="add.type=='block'">
+                                <ng-template ngFor let-block [ngForOf]="add.blocks" class="adding-block">
+                                    <div class={{block.class}}  *ngIf="block.text; else elseBlock" >
+                                        <h2 class="services block-title">{{block.title | uppercase}}</h2>
+                                        <div class="block-text-wrapper">
+                                            <ng-template ngFor let-p [ngForOf]="block.paragraphs">
+                                                <p class="p-text">{{p.text}}</p>
+                                            </ng-template>
+                                        </div>
+                                    </div>
+                                    <ng-template #elseBlock>
+                                        <div class={{block.class}}>
+                                            <img class={{block.imageClass}} src={{block.imageSrc}} alt="">
+                                            <span class="catch-phrase">{{block.phrase}}</span>
+                                        </div>
+                                    </ng-template>
+                                </ng-template>
+                    
+                            </div>
+                            <div class={{add.class}} *ngIf="add.type=='card'">
+                                <ng-template  ngFor let-item [ngForOf]="add.cards" let-i="index" class="services-wrapper">
+                                    <section (click)="navigateTo(item.url)" class="card-wrapper">
+                                        <div class="service-card">
+                                            <div class="service-name">
+                                                <h2 class="sname">{{item.name}}</h2>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </ng-template>
+                            </div>
+                            <br>
+                            <div class="{{add.class}}" *ngIf="add.type=='slide'">
+                                <!-- <div class="wrapper"> -->
+                                    <ng-template ngFor let-part [ngForOf]="add.blocks" class="adding-block">
+                                        <!-- <marquee direction="left"  behavior="alternate" > -->
+                                            <marquee behavior="" scrollamount="8" direction="left" >
+                                                <p-chip class="chip">
+                                                    <span class="bg-primary border-circle w-2rem h-2rem flex align-items-center justify-content-center">  </span> 
+                                                    <span>{{part.name | uppercase}}</span>
+                                                </p-chip>
+                                            </marquee>
+                                        <!-- </marquee> -->
+                                    </ng-template>
+                                <!-- </div> -->
+                            </div>
+                            <br>
+                        </ng-template>
+                    </div>
+
+                </ng-template>
+            </div>
+
+            <div class="content content-more">
+                <ng-template ngFor let-item [ngForOf]="contents" class="more">
+                    <h2 *ngIf="item.value==activePage" class="more-header">{{item.more.text | uppercase}}</h2>
+                    <div *ngIf="item.value==activePage" class="more-content">
+                        <ng-template ngFor let-item [ngForOf]="item.more.content" let-i="index" class="content-wrapper">
+                            <div (click)="goTo(item)" class="content-card">
+                                <img src={{item.imageSrc}} alt="" class="content-img">
+                                    <h2 class="sname">{{item.name}}</h2>
+                            </div>
+                        </ng-template>
+                    </div>
+                </ng-template>
+            </div> 
+
+        </div>
+
+
+    </div>
+
 
 
 </div>

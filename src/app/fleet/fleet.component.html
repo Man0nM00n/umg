@@ -1,0 +1,20 @@
+<p-galleria 
+        [value]="slides" 
+        [autoPlay]="true" 
+        [circular]="true" 
+        [showItemNavigators]="true" 
+        [showThumbnails]="false" 
+        [showIndicators]="true" 
+        [showIndicatorsOnItem]="true" 
+        [responsiveOptions]="responsiveOptions" 
+        [containerStyle]="{ 'max-width': '640px' }" 
+        [numVisible]="1">
+            <ng-template pTemplate="item" let-item>
+                <img src={{item.src}} style="width: 100%;" />
+            </ng-template>
+            <!-- <ng-template pTemplate="thumbnail" let-item>
+                <div class="grid grid-nogutter justify-content-center">
+                    <img src={{item.src}} style="width: 20%;"/>
+                </div>
+            </ng-template> -->
+</p-galleria>
