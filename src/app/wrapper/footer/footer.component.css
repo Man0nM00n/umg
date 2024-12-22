@@ -6,24 +6,41 @@
     margin-left: auto;
     background-color: #85b2f9;
 }
+.footer-wrapper{
+    display: grid;
+}
 .footer-content {
     margin: 0 auto;
     text-align: center;
     display: grid;
-    grid-template-columns: auto [footer-logo] auto  [quick-links] auto  [newsletter] auto  [contact] auto [map] auto ;
+    /* grid-template-columns: [quick-links] auto  [newsletter] auto  [map]; */
+    background-color: #eab308;
+    /* grid-template-rows: [logo] 1vh [options]; */
+    /* grid-template-columns:  auto  [quick-links] auto  [newsletter] auto  [contact] auto [map] auto ; */
+}
+.footer-bottom{
+    width: 100%;
+    height: 40px;
+    background-color: #001559;
 }
 .footer-logo{
-    margin-top: 6vh;
-    margin-left: auto;
     .flogo{
         max-width: 250px;
         min-width: 100px;
+        margin-top: 1vh;
+        margin-left: 2vw;
+    
+    }
+    .info{
+        align-content: center;
+        margin-left: 5vw;
+        color: white;
     }
 }
 .links{
     grid-column: quick-links;
-    min-width: 14vw;
-    max-width: 15vw;
+    min-width: fit-content;
+    max-width: max-content;
     background-color: #eab308;
     align-items: center;
     align-content: center;
@@ -58,7 +75,8 @@
 .news{
     grid-column: newsletter;
     .news-card{
-        width: 18vw;
+        min-width: fit-content;
+        max-width: max-content;
         height: 100%;
         padding: 20px;
         background: #fff;
@@ -160,6 +178,11 @@
     }
       
 }
+.map{
+    grid-column: map;
+    width: 250px;
+    background-color: #85b2f9;
+}
 .contacts{
     grid-column: contact;
     width: 14vw;
@@ -180,9 +203,6 @@
         border-radius: 30px;
         border: 4px solid #85b2f9;
     }
-}
-.map{
-    grid-column: map;
 }
 
 @keyframes glitch {
@@ -215,7 +235,7 @@
         }
     }
     .links{
-        width: 20vw;
+        width: 25vw;
         ul{
             li{
                 a{
@@ -231,3 +251,29 @@
     }
   }
 
+  @media screen and (min-width: 1503px) {
+    .footer-wrapper{
+        grid-template-columns: 20% 80%;
+    }
+    .footer-content{
+        width:80%;
+        grid-template-columns: [quick-links] auto  [newsletter] auto  [map];
+        margin-left: 20%;
+    }
+  }
+
+  @media screen and (max-width: 1502px) {
+    .footer-wrapper{
+        grid-template-rows: 1fr 1fr;
+        .footer-content{
+            width:100%;
+            margin-bottom: 15px;
+        }
+    }
+  }
+
+  @media screen and (max-width: 948px) {
+    .footer-content{
+        /* grid-template-rows: 1/2 2/2 1; */
+    }
+  }

@@ -9,7 +9,11 @@
             </p-menubar>
             <div class="flex-right align-items-right gap-2">
                 <div class="banner top-right">
-                    <span>We are proud to be from:</span>
+                    <span>We are proud to be from:                     
+                        <img 
+                        src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" 
+                        [class]="'flag flag-bf' " 
+                        style="width: 20px" /></span>
                     <!-- <span class="fi fi-bf fis"></span> -->
                     <!-- <img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/flags/4x3/bf.svg" alt="Français" /> -->
                 </div>
@@ -17,10 +21,12 @@
                     <p-button 
                           label={{item.value}} [link]="true" />
                 </ng-template>
-                <ng-template pTemplate="mobile-active">
 
-                </ng-template>
             </div>
     </p-toolbar>
+
+    <p-megaMenu class="flex-menu" [model]="menus" [style]="{ 'background-color': '#eab308', display: 'flex' }" styleClass="p-3 surface-0">
+    </p-megaMenu>
+
 
 </div>

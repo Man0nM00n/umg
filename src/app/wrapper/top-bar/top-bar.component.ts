@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { MenuItem, MegaMenuItem } from 'primeng/api';
 
 //import { ToolbarModule } from 'primeng/toolbar';
 
@@ -23,33 +23,66 @@ export class TopBarComponent {
     }
   ];
 
-  menus: MenuItem[]=[
+  menus: MegaMenuItem[]=[
     {
-      label: 'Home',
-      icon: 'p-menuitem-icon pi pi-home',
-      url:""
+      label: 'Who We Are',
+      root: true,
+      items: [
+          [
+              {
+                  items: [
+                      { label: 'Our Company', icon: 'pi pi-list', subtext: 'Subtext of item',url:"about/company" },
+                      { label: 'Our Team', icon: 'pi pi-users', subtext: 'Subtext of item', url:"about/team" },
+                      // { label: 'Case Studies', icon: 'pi pi-file', subtext: 'Subtext of item' }
+                  ]
+              }
+          ],
+          // [
+          //     {
+          //         items: [{ image: 'https://primefaces.org/cdn/primeng/images/uikit/uikit-system.png', label: 'GET STARTED', subtext: 'Build spectacular apps in no time.' }]
+          //     }
+          // ]
+      ]
+  },
+  {
+      label: 'What We Do',
+      root: true,
+      items:[
+        [
+          {
+            items:[
+              { label: 'Services Offerring', icon: 'pi pi-file', subtext: 'Subtext of item', url: "services/presentation" }
+            ]
+          }
+        ],
+        [
+          {
+              items: [
+                  { label: 'Drill & Blast', icon: 'pi pi-list', subtext: 'Subtext of item', url: "services/drill" },
+                  { label: 'Grade Control', icon: 'pi pi-users', subtext: 'Subtext of item', url: "services/grade" },
+                  { label: 'Equipment Rental', icon: 'pi pi-file', subtext: 'Subtext of item', url: "services/rental" },
+                  { label: 'Other Services', icon: 'pi pi-file', subtext: 'Subtext of item' , url: "services/others"},
+              ]
+          }
+      ],
+      ]
+  },
+  {
+      label: 'Our Projects',
+      root: true,
+      url: "projects"
+  },
+  {
+    label: 'Our Partners',
+    root: true,
+    url: "partners"
+  },
+  {
+    label: 'Contact',
+    root: true,
+    url: "contacts"
+  }
 
-    },
-    {
-      label: 'About Us',
-      icon: 'p-menuitem-icon pi pi-info-circle',
-      url:"about"
-    },
-    {
-      label: 'Our Services',
-      icon: 'p-menuitem-icon pi pi-verified',
-      url:"services"
-    },
-    {
-      label: 'Partners',
-      icon: 'p-menuitem-icon pi pi-briefcase',
-      url: "partners"
-    },
-    {
-      label: 'Contact',
-      icon: 'p-menuitem-icon pi pi-id-card',
-      url:"contacts"
-    },
   ];
 
   barmenus: MenuItem[]=[

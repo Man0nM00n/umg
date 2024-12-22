@@ -26,28 +26,17 @@
 :host ::ng-deep .p-menubar-root-list > .p-menuitem-active > p-menubarsub > .p-submenu-list {
     display: grid;
     z-index: 1004;
-    position: absolute;
     background-color: #fff;
     color: #eab308;
     float: left;
     margin-right: 100%;
-    /* grid-template-rows: 1fr 1fr; */
     grid-template-columns: 1fr 1fr; 
-    position: absolute !important;   /* Absolute positioning to detach it from its parent */
-    top: 100% !important;            /* Place it directly below the menu item */
-    left: 0 !important;              /* Start from the very left edge of the viewport */
-    width: 100vw !important;         /* Make the submenu span the full viewport width */
-    z-index: 1000;   
+    position: fixed!important;   
+    top: calc(0% + 110px);
+    left: 0 !important;              
+    width: 100vw !important;         
 }
 
-
-
-:host ::ng-deep .p-menubar-root-list > .p-menuitem-active > p-menubarsub > .p-submenu-list .subMenu{
- display: grid;
- /* grid-template-columns: 1fr 1fr; */
- align-items: center;
- position: relative;
-}
 :host ::ng-deep .p-menubar-root-list > .p-menuitem-active > p-menubarsub > .p-submenu-list .menu1 {
     width: 50vw;
 }
@@ -68,28 +57,24 @@
     max-height: 80px;
     margin-right: 0.5%;
 }
+:host ::ng-deep   .p-megamenu-root-list > .p-menuitem-active > .p-megamenu-panel{
+    display: grid;
+    position: fixed;
+    left: 0;
+}
+:host ::ng-deep .p-megamenu-grid{
+    width: 100vw;
+    height: 220px;
+}
 
+@media screen and (max-width: 1300px) {
+ .hidden-menubar{
+    display:none;
+ }    
+}
 
-
-
-
-
-@media screen and (max-width: 1302px) {
-    /* :host ::ng-deep .p-menubar-mobile-active{
-        position:absolute;
-        top: auto;
-        display: grid;
-        width: 70%;
-        grid-template-columns: 1fr;
-        height: 90vh;
-        z-index: 1005;
+@media screen and (min-width: 1301px) {
+    .flex-menu{
+        display: none;
     }
-    :host ::ng-deep .p-menubar-root-list{
-      z-index: 1004;
-      position: fixed;
-      width: 100%;
-      display: none;
-      margin-left: -32vw;
-    } */
-    
 }

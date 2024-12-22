@@ -19,6 +19,7 @@ import { ImageModule } from 'primeng/image';
 import { InplaceModule } from 'primeng/inplace';
 import { InputTextModule } from 'primeng/inputtext';
 
+import { MegaMenuModule } from 'primeng/megamenu';
 import { MenubarModule } from 'primeng/menubar';
 
 
@@ -80,6 +81,7 @@ import { ProjectsComponent } from './projects/projects.component';
     InplaceModule,
     InputTextModule,
 
+    MegaMenuModule,
     MenubarModule,
 
     PanelModule,
